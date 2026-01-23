@@ -5,7 +5,7 @@ import { CommandPalette } from "@/components/CommandPalette"
 
 export function RootLayout() {
   return (
-    <div className="flex min-h-screen flex-col bg-[#242424] text-zinc-100 font-sans antialiased selection:bg-white/20">
+    <div className="flex min-h-screen flex-col bg-transparent text-zinc-100 font-sans antialiased selection:bg-white/20">
       <NavBar />
       <main className="flex-1">
         <Outlet />

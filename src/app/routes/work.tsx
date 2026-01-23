@@ -55,7 +55,7 @@ export default function Work() {
         {WORK_HISTORY.map((job, index) => (
           <div key={index} className="relative">
             {/* Timeline Dot */}
-            <div className="absolute -left-[41px] top-0 flex h-5 w-5 items-center justify-center rounded-full bg-[#242424] ring-1 ring-white/20">
+            <div className="absolute -left-[41px] top-0 flex h-5 w-5 items-center justify-center rounded-full bg-black/40 backdrop-blur-sm ring-1 ring-white/20">
               <div className="h-2 w-2 rounded-full bg-[#4facfe]" />
             </div>
 

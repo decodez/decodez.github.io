@@ -13,7 +13,7 @@ export default function Contact() {
         <div className="grid gap-4 sm:grid-cols-2">
           <a 
             href="mailto:hello@akhil.dev" 
-            className="group flex flex-col items-center justify-center rounded-xl border border-white/10 bg-white/5 p-8 transition-all hover:-translate-y-1 hover:border-[#4facfe]/50 hover:bg-[#4facfe]/5"
+            className="group flex flex-col items-center justify-center glass-card p-8 hover:border-[#4facfe]/50 hover:bg-[#4facfe]/5"
           >
             <Mail className="mb-4 h-8 w-8 text-zinc-400 transition-colors group-hover:text-[#4facfe]" />
             <h3 className="mb-1 font-bold text-white">Email</h3>
@@ -24,7 +24,7 @@ export default function Contact() {
             href="https://linkedin.com/in/akhilprasenan" 
             target="_blank" 
             rel="noreferrer"
-            className="group flex flex-col items-center justify-center rounded-xl border border-white/10 bg-white/5 p-8 transition-all hover:-translate-y-1 hover:border-[#0077b5]/50 hover:bg-[#0077b5]/5"
+            className="group flex flex-col items-center justify-center glass-card p-8 hover:border-[#0077b5]/50 hover:bg-[#0077b5]/5"
           >
             <Linkedin className="mb-4 h-8 w-8 text-zinc-400 transition-colors group-hover:text-[#0077b5]" />
             <h3 className="mb-1 font-bold text-white">LinkedIn</h3>
@@ -35,7 +35,7 @@ export default function Contact() {
             href="https://github.com/akhilprasenan" 
             target="_blank" 
             rel="noreferrer"
-            className="group flex flex-col items-center justify-center rounded-xl border border-white/10 bg-white/5 p-8 transition-all hover:-translate-y-1 hover:border-[#e6edf3]/50 hover:bg-[#e6edf3]/5"
+            className="group flex flex-col items-center justify-center glass-card p-8 hover:border-[#e6edf3]/50 hover:bg-[#e6edf3]/5"
           >
             <Github className="mb-4 h-8 w-8 text-zinc-400 transition-colors group-hover:text-white" />
             <h3 className="mb-1 font-bold text-white">GitHub</h3>
@@ -44,7 +44,7 @@ export default function Contact() {
 
           <a 
             href="/resume.pdf"
-            className="group flex flex-col items-center justify-center rounded-xl border border-white/10 bg-white/5 p-8 transition-all hover:-translate-y-1 hover:border-green-500/50 hover:bg-green-500/5"
+            className="group flex flex-col items-center justify-center glass-card p-8 hover:border-green-500/50 hover:bg-green-500/5"
           >
             <FileText className="mb-4 h-8 w-8 text-zinc-400 transition-colors group-hover:text-green-500" />
             <h3 className="mb-1 font-bold text-white">Resume</h3>

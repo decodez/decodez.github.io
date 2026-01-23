@@ -2,13 +2,42 @@
 
 @theme {
   --font-sans: "Inter", system-ui, sans-serif;
-  --color-primary: oklch(0.5 0.2 250); /* Example custom color if needed */
+  --color-primary: oklch(0.5 0.2 250); 
 }
 
 /* Custom Utilities */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .glass {
+    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass-card {
+    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem; 
+    transition: all 300ms;
+  }
+  
+  .glass-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.01);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .glass-panel {
+    backdrop-filter: blur(24px);
+    background-color: rgba(36, 36, 36, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 }
 
@@ -19,7 +48,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #121212; /* Darker bg to make glass pop */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

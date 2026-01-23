@@ -30,14 +30,14 @@ export default function Toolbox() {
 
       <div className="grid gap-8 sm:grid-cols-2">
         {SKILLS.map((group) => (
-          <div key={group.category} className="rounded-xl border border-white/10 bg-white/5 p-8 transition-colors hover:border-white/20 hover:bg-white/[0.07]">
+          <div key={group.category} className="glass-card p-8">
             <div className="mb-6 flex items-center gap-3">
               <group.icon className="h-6 w-6 text-[#4facfe]" />
               <h2 className="text-xl font-bold text-white">{group.category}</h2>
             </div>
             <div className="flex flex-wrap gap-2">
               {group.items.map(skill => (
-                <span key={skill} className="rounded-md border border-white/10 bg-black/20 px-3 py-1.5 text-sm text-zinc-300">
+                <span key={skill} className="rounded-md border border-white/5 bg-white/5 px-3 py-1.5 text-sm text-zinc-300">
                   {skill}
                 </span>
               ))}

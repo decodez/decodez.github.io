@@ -40,7 +40,7 @@ export default function CaseStudies() {
       </div>
 
       {/* Controls */}
-      <div className="sticky top-16 z-30 mb-12 -mx-4 border-y border-white/10 bg-[#242424]/95 px-4 py-4 backdrop-blur supports-[backdrop-filter]:bg-[#242424]/60 sm:mx-0 sm:rounded-xl sm:border sm:px-6">
+      <div className="sticky top-16 z-30 mb-12 -mx-4 glass-panel px-4 py-4 sm:mx-0 sm:rounded-xl sm:border sm:px-6">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="relative w-full max-w-md">
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />

@@ -13,7 +13,7 @@ export function NavBar() {
   const location = useLocation()
 
   return (
-    <nav className="sticky top-0 z-40 w-full border-b border-white/10 bg-[#242424]/80 backdrop-blur-md">
+    <nav className="sticky top-0 z-40 w-full glass-panel">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-8">
         <Link to="/" className="text-lg font-bold tracking-tight text-white">
           Akhil.

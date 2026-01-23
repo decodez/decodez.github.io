@@ -45,17 +45,17 @@ export default function Home() {
 
       {/* Proof Grid */}
       <section className="mb-24 grid gap-6 sm:grid-cols-3">
-        <div className="group rounded-xl border border-white/10 bg-white/5 p-6 transition-colors hover:border-white/20">
+        <div className="group glass-card p-6">
           <Layers className="mb-4 h-8 w-8 text-[#4facfe]" />
           <h3 className="mb-2 text-lg font-bold text-white">Architecture</h3>
           <p className="text-sm text-zinc-400">Designing fault-tolerant distributed systems and scalable data models.</p>
         </div>
-        <div className="group rounded-xl border border-white/10 bg-white/5 p-6 transition-colors hover:border-white/20">
+        <div className="group glass-card p-6">
           <Code2 className="mb-4 h-8 w-8 text-[#00f2fe]" />
           <h3 className="mb-2 text-lg font-bold text-white">DX & CI/CD</h3>
           <p className="text-sm text-zinc-400">Optimizing build pipelines and creating tooling that developers love.</p>
         </div>
-        <div className="group rounded-xl border border-white/10 bg-white/5 p-6 transition-colors hover:border-white/20">
+        <div className="group glass-card p-6">
           <LineChart className="mb-4 h-8 w-8 text-[#4facfe]" />
           <h3 className="mb-2 text-lg font-bold text-white">Data-Heavy Apps</h3>
           <p className="text-sm text-zinc-400">Handling high throughput and visualizing complex datasets seamlessly.</p>

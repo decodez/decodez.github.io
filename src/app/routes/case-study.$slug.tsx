@@ -113,7 +113,7 @@ export default function CaseStudyDetail() {
             <h2 className="mb-6 text-2xl font-bold text-white">Key Technical Decisions</h2>
             <div className="space-y-6">
               {study.decisions.map((decision, i) => (
-                <div key={i} className="rounded-xl border border-white/10 bg-white/[0.02] p-6">
+                <div key={i} className="glass-card p-6">
                   <h3 className="flex items-center text-lg font-bold text-white">
                     <Scale className="mr-3 h-5 w-5 text-[#4facfe]" />
                     {decision.title}
@@ -129,7 +129,7 @@ export default function CaseStudyDetail() {
           <section id="architecture" className="scroll-mt-24">
             <h2 className="mb-6 text-2xl font-bold text-white">Architecture</h2>
             <p className="mb-6 text-lg text-zinc-300">{study.architecture.overview}</p>
-            <div className="rounded-xl border border-white/10 bg-zinc-900 p-6 font-mono text-sm text-zinc-400">
+            <div className="glass-card p-6 font-mono text-sm text-zinc-400">
                <ul className="space-y-2 list-disc list-inside">
                 {study.architecture.bullets.map((bullet, i) => (
                   <li key={i}>{bullet}</li>
@@ -164,7 +164,7 @@ export default function CaseStudyDetail() {
 
           <section id="tradeoffs" className="scroll-mt-24 pb-20">
             <h2 className="mb-6 text-2xl font-bold text-white">Trade-offs & Lessons</h2>
-            <div className="rounded-xl border border-white/10 bg-white/5 p-6">
+            <div className="glass-card p-6">
               <ul className="space-y-4">
                  {study.tradeoffs.map((tradeoff, i) => (
                   <li key={i} className="text-zinc-400">
