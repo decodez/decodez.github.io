@@ -12,15 +12,15 @@ export function GradientBackground() {
 
   // Create dynamic gradients that react to mouse position
   const background = useMotionTemplate`radial-gradient(
-    circle at ${springX}px ${springY}px,
-    rgba(79, 172, 254, 0.15),
+    400px circle at ${springX}px ${springY}px,
+    rgba(79, 172, 254, 0.1),
     transparent 80%
   )`
   
   // Secondary ambient gradient
   const secondaryBackground = useMotionTemplate`radial-gradient(
-    circle at ${springX}px ${springY}px,
-    rgba(0, 242, 254, 0.10),
+    250px circle at ${springX}px ${springY}px,
+    rgba(0, 242, 254, 0.05),
     transparent 50%
   )`
 
