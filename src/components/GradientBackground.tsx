@@ -64,7 +64,7 @@ export function GradientBackground() {
           repeat: Infinity,
           ease: "linear",
         }}
-        className="absolute top-[5%] left-[5%] h-[500px] w-[500px] rounded-full bg-blue-500/20 blur-[120px]"
+        className="absolute top-[5%] left-[5%] h-[500px] w-[500px] rounded-full bg-blue-500/08 blur-[180px]"
       />
 
       <motion.div
@@ -74,11 +74,11 @@ export function GradientBackground() {
           scale: [1, 0.9, 1.2, 1],
         }}
         transition={{
-          duration: 25,
+          duration: 40,
           repeat: Infinity,
           ease: "linear",
         }}
-        className="absolute bottom-[10%] right-[10%] h-[600px] w-[600px] rounded-full bg-purple-500/20 blur-[140px]"
+        className="absolute bottom-[10%] right-[10%] h-[600px] w-[600px] rounded-full bg-purple-500/08 blur-[200px]"
       />
 
       <motion.div
@@ -87,11 +87,11 @@ export function GradientBackground() {
           y: [0, 150, 80, 0],
         }}
         transition={{
-          duration: 15,
+          duration: 35,
           repeat: Infinity,
           ease: "linear",
         }}
-        className="absolute top-[30%] right-[20%] h-[400px] w-[400px] rounded-full bg-cyan-400/15 blur-[100px]"
+        className="absolute top-[30%] right-[20%] h-[400px] w-[400px] rounded-full bg-cyan-400/05 blur-[160px]"
       />
       
       {/* Noise Texture Overlay */}
