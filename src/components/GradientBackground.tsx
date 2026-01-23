@@ -1,32 +1,25 @@
 import { useEffect } from "react"
-import { motion, useMotionTemplate, useMotionValue, useSpring } from "framer-motion"
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion"
 
 export function GradientBackground() {
   const mouseX = useMotionValue(0)
   const mouseY = useMotionValue(0)
 
   // Smooth out the mouse movement
-  const springConfig = { damping: 30, stiffness: 100, mass: 2 }
+  const springConfig = { damping: 50, stiffness: 200 }
   const springX = useSpring(mouseX, springConfig)
   const springY = useSpring(mouseY, springConfig)
 
-  // Create dynamic gradients that react to mouse position
-  const background = useMotionTemplate`radial-gradient(
-    400px circle at ${springX}px ${springY}px,
-    rgba(79, 172, 254, 0.1),
-    transparent 80%
-  )`
+  // Map mouse position to subtle offsets (-30px to 30px)
+  const moveX = useTransform(springX, [0, 2000], [-30, 30])
+  const moveY = useTransform(springY, [0, 1200], [-30, 30])
   
-  // Secondary ambient gradient
-  const secondaryBackground = useMotionTemplate`radial-gradient(
-    250px circle at ${springX}px ${springY}px,
-    rgba(0, 242, 254, 0.05),
-    transparent 50%
-  )`
+  // Inverse move for parallax feel
+  const moveXInverse = useTransform(springX, [0, 2000], [30, -30])
+  const moveYInverse = useTransform(springY, [0, 1200], [30, -30])
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      // Offset the center slightly for the secondary gradient to create depth
       mouseX.set(e.clientX)
       mouseY.set(e.clientY)
     }
@@ -37,30 +30,15 @@ export function GradientBackground() {
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden bg-[#121212]">
-      {/* Dynamic Mouse Follower */}
+      {/* Floating Animated Shapes with Subtle Mouse Sensitivity */}
       <motion.div
-        className="absolute inset-0 opacity-100"
-        style={{ background }}
-      />
-      
-      {/* Secondary Ambient Follower (laggy/offset feel) */}
-      <motion.div
-        className="absolute inset-0 opacity-70 blur-3xl"
-        style={{ 
-          background: secondaryBackground,
-          transform: "translate(-5%, -5%) scale(1.1)" 
-        }}
-      />
-
-      {/* Floating Animated Shapes */}
-      <motion.div
+        style={{ x: moveX, y: moveY }}
         animate={{
-          x: [0, 150, -100, 0],
-          y: [0, 100, 150, 0],
-          scale: [1, 1.3, 0.8, 1],
+          x: [0, 100, -50, 0],
+          y: [0, 50, 100, 0],
         }}
         transition={{
-          duration: 20,
+          duration: 40,
           repeat: Infinity,
           ease: "linear",
         }}
@@ -68,13 +46,13 @@ export function GradientBackground() {
       />
 
       <motion.div
+        style={{ x: moveXInverse, y: moveYInverse }}
         animate={{
-          x: [0, -150, 80, 0],
-          y: [0, -120, -60, 0],
-          scale: [1, 0.9, 1.2, 1],
+          x: [0, -100, 50, 0],
+          y: [0, -80, -40, 0],
         }}
         transition={{
-          duration: 40,
+          duration: 50,
           repeat: Infinity,
           ease: "linear",
         }}
@@ -82,12 +60,13 @@ export function GradientBackground() {
       />
 
       <motion.div
+        style={{ x: moveX, y: moveYInverse }}
         animate={{
-          x: [0, 80, -50, 0],
-          y: [0, 150, 80, 0],
+          x: [0, 50, -30, 0],
+          y: [0, 100, 50, 0],
         }}
         transition={{
-          duration: 35,
+          duration: 45,
           repeat: Infinity,
           ease: "linear",
         }}
