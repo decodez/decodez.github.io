@@ -55,43 +55,43 @@ export function GradientBackground() {
       {/* Floating Animated Shapes */}
       <motion.div
         animate={{
-          x: [0, 100, -50, 0],
-          y: [0, 50, 100, 0],
-          scale: [1, 1.2, 0.9, 1],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="absolute top-[10%] left-[10%] h-[400px] w-[400px] rounded-full bg-blue-500/20 blur-[100px]"
-      />
-
-      <motion.div
-        animate={{
-          x: [0, -100, 50, 0],
-          y: [0, -80, -40, 0],
-          scale: [1, 0.8, 1.1, 1],
-        }}
-        transition={{
-          duration: 30,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="absolute bottom-[20%] right-[15%] h-[500px] w-[500px] rounded-full bg-purple-500/20 blur-[120px]"
-      />
-
-      <motion.div
-        animate={{
-          x: [0, 50, -30, 0],
-          y: [0, 100, 50, 0],
+          x: [0, 150, -100, 0],
+          y: [0, 100, 150, 0],
+          scale: [1, 1.3, 0.8, 1],
         }}
         transition={{
           duration: 20,
           repeat: Infinity,
           ease: "linear",
         }}
-        className="absolute top-[40%] right-[30%] h-[300px] w-[300px] rounded-full bg-cyan-400/15 blur-[80px]"
+        className="absolute top-[5%] left-[5%] h-[500px] w-[500px] rounded-full bg-blue-600/30 blur-[120px]"
+      />
+
+      <motion.div
+        animate={{
+          x: [0, -150, 80, 0],
+          y: [0, -120, -60, 0],
+          scale: [1, 0.9, 1.2, 1],
+        }}
+        transition={{
+          duration: 25,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="absolute bottom-[10%] right-[10%] h-[600px] w-[600px] rounded-full bg-purple-600/30 blur-[140px]"
+      />
+
+      <motion.div
+        animate={{
+          x: [0, 80, -50, 0],
+          y: [0, 150, 80, 0],
+        }}
+        transition={{
+          duration: 15,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="absolute top-[30%] right-[20%] h-[400px] w-[400px] rounded-full bg-cyan-500/25 blur-[100px]"
       />
       
       {/* Noise Texture Overlay */}
