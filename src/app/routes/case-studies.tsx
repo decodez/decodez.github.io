@@ -31,10 +31,10 @@ export default function CaseStudies() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-16 sm:px-8">
+    <div className="container mx-auto px-4 py-16 sm:px-8 transition-colors duration-500">
       <div className="mb-12 max-w-2xl">
-        <h1 className="text-4xl font-bold tracking-tight text-white mb-4">Case Studies</h1>
-        <p className="text-lg text-zinc-400">
+        <h1 className="text-4xl font-bold tracking-tight text-[var(--text-primary)] mb-4">Case Studies</h1>
+        <p className="text-lg text-[var(--text-secondary)]">
           A collection of challenging problems I've solved, focusing on architectural decisions, trade-offs, and measurable impact.
         </p>
       </div>
@@ -43,18 +43,18 @@ export default function CaseStudies() {
       <div className="sticky top-16 z-30 mb-12 -mx-4 glass-panel px-4 py-4 sm:mx-0 sm:rounded-xl sm:border sm:px-6">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="relative w-full max-w-md">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-500" />
+            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--text-muted)]" />
             <input 
               type="text"
               placeholder="Search by title, impact, or company..."
-              className="h-10 w-full rounded-md border border-white/10 bg-black/20 pl-10 pr-4 text-sm text-white placeholder:text-zinc-500 focus:border-white/20 focus:outline-none focus:ring-1 focus:ring-white/20"
+              className="h-10 w-full rounded-md border border-[var(--glass-border)] bg-[var(--glass-bg)] pl-10 pr-4 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:border-[#4facfe]/50 focus:outline-none focus:ring-1 focus:ring-[#4facfe]/20"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
           
           <div className="flex flex-wrap items-center gap-2">
-            <div className="flex items-center text-sm font-medium text-zinc-400 lg:mr-2">
+            <div className="flex items-center text-sm font-medium text-[var(--text-muted)] lg:mr-2">
               <SlidersHorizontal className="mr-2 h-4 w-4" /> Filter:
             </div>
             {ALL_TAGS.map(tag => (
@@ -65,7 +65,7 @@ export default function CaseStudies() {
                   "rounded-full border px-3 py-1 text-xs font-medium transition-colors",
                   activeTags.includes(tag)
                     ? "border-[#4facfe] bg-[#4facfe]/10 text-[#4facfe]"
-                    : "border-white/10 bg-white/5 text-zinc-400 hover:border-white/20 hover:text-zinc-200"
+                    : "border-[var(--glass-border)] bg-[var(--glass-bg)] text-[var(--text-secondary)] hover:border-[var(--glass-border-hover)] hover:text-[var(--text-primary)]"
                 )}
               >
                 {tag}
@@ -74,7 +74,7 @@ export default function CaseStudies() {
             {activeTags.length > 0 && (
               <button 
                 onClick={() => setActiveTags([])}
-                className="ml-2 rounded-full p-1 text-zinc-500 hover:bg-white/10 hover:text-white"
+                className="ml-2 rounded-full p-1 text-[var(--text-muted)] hover:bg-[var(--glass-bg)] hover:text-[var(--text-primary)]"
                 title="Clear filters"
               >
                 <X className="h-4 w-4" />
@@ -89,7 +89,7 @@ export default function CaseStudies() {
           filteredStudies.map(s => <CaseStudyCard key={s.slug} study={s} />)
         ) : (
           <div className="col-span-full py-20 text-center">
-            <p className="text-zinc-500">No case studies match your criteria.</p>
+            <p className="text-[var(--text-muted)]">No case studies match your criteria.</p>
             <button 
               onClick={() => {setSearchQuery(""); setActiveTags([])}}
               className="mt-4 text-sm text-[#4facfe] hover:underline"

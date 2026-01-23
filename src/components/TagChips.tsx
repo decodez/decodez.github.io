@@ -13,7 +13,7 @@ export function TagChips({ tags, className, size = 'md' }: TagChipsProps) {
         <span
           key={tag}
           className={cn(
-            "rounded-full border border-white/10 bg-white/5 px-3 py-1 text-zinc-400 transition-colors hover:border-white/20 hover:text-zinc-200",
+            "rounded-full border border-[var(--glass-border)] bg-[var(--glass-bg)] px-3 py-1 text-[var(--text-secondary)] transition-colors hover:border-[var(--glass-border-hover)] hover:text-[var(--text-primary)]",
             size === 'sm' ? "text-xs" : "text-sm"
           )}
         >

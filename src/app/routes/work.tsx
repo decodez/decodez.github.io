@@ -48,32 +48,32 @@ const WORK_HISTORY = [
 
 export default function Work() {
   return (
-    <div className="container mx-auto max-w-3xl px-4 py-16 sm:px-8">
-      <h1 className="mb-16 text-4xl font-bold tracking-tight text-white">Work History</h1>
+    <div className="container mx-auto max-w-3xl px-4 py-16 sm:px-8 transition-colors duration-500">
+      <h1 className="mb-16 text-4xl font-bold tracking-tight text-[var(--text-primary)]">Work History</h1>
       
-      <div className="relative border-l border-white/10 pl-8 ml-4 space-y-16">
+      <div className="relative border-l border-[var(--glass-border)] pl-8 ml-4 space-y-16">
         {WORK_HISTORY.map((job, index) => (
           <div key={index} className="relative">
             {/* Timeline Dot */}
-            <div className="absolute -left-[41px] top-0 flex h-5 w-5 items-center justify-center rounded-full bg-black/40 backdrop-blur-sm ring-1 ring-white/20">
+            <div className="absolute -left-[41px] top-0 flex h-5 w-5 items-center justify-center rounded-full bg-[var(--bg-color)] backdrop-blur-sm ring-1 ring-[var(--glass-border)] transition-colors duration-500">
               <div className="h-2 w-2 rounded-full bg-[#4facfe]" />
             </div>
 
             <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-              <h2 className="text-xl font-bold text-white">{job.company}</h2>
-              <div className="mt-1 flex items-center text-sm font-medium text-zinc-500 sm:mt-0">
+              <h2 className="text-xl font-bold text-[var(--text-primary)]">{job.company}</h2>
+              <div className="mt-1 flex items-center text-sm font-medium text-[var(--text-muted)] sm:mt-0">
                 <Calendar className="mr-1.5 h-3.5 w-3.5" />
                 {job.dates}
               </div>
             </div>
             
             <div className="mt-2 text-lg font-medium text-[#4facfe]">{job.role}</div>
-            <p className="mt-4 text-zinc-400">{job.description}</p>
+            <p className="mt-4 text-[var(--text-secondary)]">{job.description}</p>
             
             <ul className="mt-6 space-y-3">
               {job.achievements.map((item, i) => (
-                <li key={i} className="flex items-start text-sm text-zinc-300">
-                  <span className="mr-3 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/20" />
+                <li key={i} className="flex items-start text-sm text-[var(--text-secondary)]">
+                  <span className="mr-3 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--text-muted)] opacity-50" />
                   {item}
                 </li>
               ))}

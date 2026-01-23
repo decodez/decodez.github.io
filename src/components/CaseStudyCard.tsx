@@ -15,10 +15,10 @@ export function CaseStudyCard({ study }: CaseStudyCardProps) {
     >
       <div className="flex flex-col gap-4">
         <div>
-          <h3 className="text-xl font-bold text-white group-hover:text-[#4facfe] transition-colors">
+          <h3 className="text-xl font-bold text-[var(--text-primary)] group-hover:text-[#4facfe] transition-colors">
             {study.title}
           </h3>
-          <p className="mt-2 text-sm text-zinc-400 line-clamp-2">
+          <p className="mt-2 text-sm text-[var(--text-secondary)] line-clamp-2">
             {study.impactLine}
           </p>
         </div>
