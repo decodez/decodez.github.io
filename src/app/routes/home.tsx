@@ -7,7 +7,10 @@ export default function Home() {
   const caseStudies = getAllCaseStudies().slice(0, 3)
 
   return (
-    <div className="container mx-auto px-4 py-16 sm:px-8">
+    <div className="container mx-auto px-4 py-16 sm:px-8 relative z-10">
+      {/* Abstract Glass Overlay for Home Page Specifically */}
+      <div className="fixed inset-0 pointer-events-none bg-black/10 backdrop-blur-[2px] -z-1" />
+      
       {/* Hero */}
       <section className="mb-24 flex max-w-3xl flex-col gap-6">
         <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-7xl">
