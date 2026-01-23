@@ -1,0 +1,60 @@
+{
+    "slug": "scaling-realtime-analytics",
+    "title": "Scaling Real-time Analytics to 1M+ Events/Sec",
+    "date": "2025-06-15",
+    "role": "Principal Engineer",
+    "company": "TechStream Inc.",
+    "tags": [
+        "Architecture",
+        "Data Engineering",
+        "Performance"
+    ],
+    "impactLine": "Reduced latency by 85% while cutting infrastructure costs by 40%.",
+    "problem": "The legacy analytics pipeline was struggling to keep up with peak traffic (1M events/sec), causing data delays of up to 4 hours and frequent outages during marketing campaigns.",
+    "constraints": [
+        "Must maintain backward compatibility with existing ingestion APIs",
+        "Zero data loss requirement",
+        "Budget constraint: cannot increase total AWS spend"
+    ],
+    "decisions": [
+        {
+            "title": "Migrating from EC2-based Kafka to Managed MSK",
+            "why": "Reduced operational overhead and allowed team to focus on application logic rather than Zookeeper maintenance."
+        },
+        {
+            "title": "Adopting Rust for Ingestion Services",
+            "why": "replaced Python consumers to handle high throughput with predictable tail latencies and lower memory footprint."
+        }
+    ],
+    "architecture": {
+        "overview": "A streaming-first architecture using Kafka as the backbone, processing data with Rust microservices, and sinking primarily to ClickHouse for real-time queries.",
+        "bullets": [
+            "Ingestion Layer: API Gateway -> Kinesis -> Rust Ingestors",
+            "Processing: Kafka Streams for aggregation",
+            "Storage: ClickHouse for OLAP, S3 for cold storage"
+        ]
+    },
+    "implementationNotes": [
+        "Used custom partitioning strategy to avoid hot shards.",
+        "Implemented backpressure handling at the gateway level."
+    ],
+    "results": [
+        "P99 latency drop from 4.5s to 250ms",
+        "Infrastructure bill reduced by 40% due to efficient Rust binaries",
+        "Zero downtime migration achieved via dual-write strategy"
+    ],
+    "tradeoffs": [
+        "Rust learning curve slowed initial development by ~2 weeks.",
+        "ClickHouse complexity requires specialized knowledge for maintenance."
+    ],
+    "nextImprovements": [
+        "Implement tiered storage in tiered storage in ClickHouse.",
+        "Explore serverless consumers for sporadic low-volume topics."
+    ],
+    "links": [
+        {
+            "label": "Engineering Blog Post",
+            "url": "https://example.com/blog"
+        }
+    ]
+}
