@@ -1,25 +1,20 @@
-import { Code2, Database, Cloud, Terminal } from "lucide-react"
+import { Code2, Layers, Cloud } from "lucide-react"
 
 const SKILLS = [
   {
-    category: "Frontend & UI",
+    category: "Languages & Frameworks",
     icon: Code2,
-    items: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "WebAssembly"]
+    items: ["JavaScript", "TypeScript", "Python", "Angular", "React", "HTML", "CSS", "SASS"]
   },
   {
-    category: "Backend & Systems",
-    icon: Terminal,
-    items: ["Node.js", "Rust", "Go", "Python", "gRPC", "GraphQL", "Redis"]
-  },
-  {
-    category: "Data & Storage",
-    icon: Database,
-    items: ["PostgreSQL", "ClickHouse", "Kafka", "DynamoDB", "Elasticsearch"]
-  },
-  {
-    category: "Cloud & DevOps",
+    category: "Platform & Tooling",
     icon: Cloud,
-    items: ["AWS", "Kubernetes", "Terraform", "Docker", "GitHub Actions", "Prometheus"]
+    items: ["CI/CD pipelines", "DevOps workflows", "Monitoring", "Production Support"]
+  },
+  {
+    category: "Systems & Architecture",
+    icon: Layers,
+    items: ["Frontend Systems", "API Integrations", "Data Visualisation", "Enterprise CMS"]
   }
 ]
 
