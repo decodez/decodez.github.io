@@ -1,0 +1,54 @@
+{
+    "slug": "enterprise-gov-platforms",
+    "title": "Enterprise & Government Digital Platforms",
+    "date": "2022-06-01",
+    "role": "Senior UI/UX Developer",
+    "company": "EY Digital / JLL",
+    "tags": [
+        "Architecture",
+        "Compliance",
+        "CMS Integration",
+        "Frontend",
+        "Accessibility"
+    ],
+    "impactLine": "Delivered multiple large-scale platforms compliant with strict government digital service standards.",
+    "problem": "Delivering complex, content-heavy enterprise platforms that needed to integrate deeply with legacy CMS systems (Sitefinity, Sitecore) while meeting modern performance benchmarks and strict government accessibility/security compliance.",
+    "constraints": [
+        "Strict compliance with Singapore Government Digital Service Standards (DSS).",
+        "Seamless integration with enterprise CMS backends.",
+        "High maintainability requirements for long-term vendor support."
+    ],
+    "decisions": [
+        {
+            "title": "Component-Driven CMS Integration",
+            "why": "Decoupled frontend components from CMS templates to allow independent development and testing cycles while maintaining visual consistency."
+        },
+        {
+            "title": "Accessibility-First Development",
+            "why": "Enforced WCAG 2.1 AA standards at the component level to minimize compliance audit failures during UAT."
+        }
+    ],
+    "architecture": {
+        "overview": "A hybrid architecture leveraging enterprise CMS for content management, serving headless or decoupled frontend interfaces built with modern JavaScript frameworks to ensure interactivity and performance.",
+        "bullets": [
+            "Frontend: React / Modern JS Frameworks",
+            "CMS: Sitefinity / Sitecore",
+            "Compliance: Automated accessibility testing pipelines"
+        ]
+    },
+    "implementationNotes": [
+        "Created shared frontend component libraries to ensure consistency across different government agencies.",
+        "Implemented rigorous build pipelines to bake in security headers and asset optimization."
+    ],
+    "results": [
+        "Successfully launched multiple high-traffic government portals.",
+        "Passed strict third-party security and accessibility audits with minimal remediation."
+    ],
+    "tradeoffs": [
+        "CMS integration limits some flexibility in frontend routing and state management compared to pure SPA architectures."
+    ],
+    "nextImprovements": [
+        "Explore modern Jamstack approaches with Headless CMS capability to further decouple the presentation layer."
+    ],
+    "links": []
+}
