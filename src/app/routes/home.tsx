@@ -170,8 +170,8 @@ export default function Home() {
       </section>
 
       {/* Work History Section */}
-      <section id="work" className="te-grid-item col-span-full scroll-mt-14 pt-24 pb-32">
-        <div className="mb-16">
+      <section id="work" className="te-grid-item col-span-full scroll-mt-14 !p-0">
+        <div className="p-8 sm:p-16">
           <div className="inline-block border-2 border-[var(--border-color)] px-4 py-1 mb-6 text-[10px] font-black uppercase tracking-widest bg-[var(--text-primary)] text-[var(--bg-color)]">
             work history
           </div>
@@ -180,8 +180,8 @@ export default function Home() {
 
         <div className="space-y-0 border-t border-[var(--border-color)]">
           {WORK_HISTORY.map((job, index) => (
-            <div key={index} className="border-b border-[var(--border-color)] py-16 group hover:bg-[var(--text-primary)]/5 transition-colors px-4 sm:px-0">
-              <div className="grid md:grid-cols-12 gap-8 max-w-6xl mx-auto">
+            <div key={index} className="border-b border-[var(--border-color)] last:border-b-0 py-16 group hover:bg-[var(--text-primary)]/5 transition-colors px-8 sm:px-16">
+              <div className="grid md:grid-cols-12 gap-8 max-w-6xl">
                 <div className="md:col-span-3">
                   <div className="text-[10px] font-black uppercase tracking-widest text-[#ff4d00] mb-2">{job.dates}</div>
                   <h3 className="text-2xl font-black tracking-tighter">{job.company}</h3>
