@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react"
 import { Command } from "cmdk"
-import { Briefcase, Code, Home, Mail, Search, PenTool } from "lucide-react"
-import { getAllCaseStudies } from "@/lib/content"
+import { Briefcase, Code, Home, Mail, Search } from "lucide-react"
 
 export function CommandPalette() {
   const [open, setOpen] = useState(false)
-  const caseStudies = getAllCaseStudies()
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -62,19 +60,6 @@ export function CommandPalette() {
                 <Mail className="mr-3 h-4 w-4" />
                 <span>contact / direct-outreach</span>
               </Command.Item>
-            </Command.Group>
-
-            <Command.Group heading="case studies" className="px-4 py-3 text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)] border-b border-[var(--border-color)]">
-              {caseStudies.map((study) => (
-                <Command.Item 
-                  key={study.slug} 
-                  onSelect={() => runCommand(`/case-studies/${study.slug}`)}
-                  className="relative flex cursor-pointer select-none items-center px-4 py-3 text-sm font-bold tracking-tight outline-none aria-selected:bg-[var(--text-primary)] aria-selected:text-[var(--bg-color)] transition-colors border-b border-[var(--border-color)] last:border-0"
-                >
-                  <PenTool className="mr-3 h-4 w-4" />
-                  <span>studies / {study.title}</span>
-                </Command.Item>
-              ))}
             </Command.Group>
 
             <div className="te-grid-item py-1 bg-[var(--text-primary)] flex items-center justify-center">
