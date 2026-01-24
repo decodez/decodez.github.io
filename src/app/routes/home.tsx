@@ -170,17 +170,17 @@ export default function Home() {
       </section>
 
       {/* Work History Section */}
-      <section id="work" className="te-grid-item col-span-full scroll-mt-14 pt-24 pb-32 bg-[var(--text-primary)] text-[var(--bg-color)]">
+      <section id="work" className="te-grid-item col-span-full scroll-mt-14 pt-24 pb-32">
         <div className="mb-16">
-          <div className="inline-block border-2 border-[var(--bg-color)] px-4 py-1 mb-6 text-[10px] font-black uppercase tracking-widest bg-[var(--bg-color)] text-[var(--text-primary)]">
+          <div className="inline-block border-2 border-[var(--border-color)] px-4 py-1 mb-6 text-[10px] font-black uppercase tracking-widest bg-[var(--text-primary)] text-[var(--bg-color)]">
             work history
           </div>
           <h2 className="text-4xl font-black tracking-tighter mb-4">professional record / timeline</h2>
         </div>
 
-        <div className="space-y-0 border-t border-[var(--bg-color)]">
+        <div className="space-y-0 border-t border-[var(--border-color)]">
           {WORK_HISTORY.map((job, index) => (
-            <div key={index} className="border-b border-[var(--bg-color)] py-16 group hover:bg-[#ffffff]/5 transition-colors px-4 sm:px-0">
+            <div key={index} className="border-b border-[var(--border-color)] py-16 group hover:bg-[var(--text-primary)]/5 transition-colors px-4 sm:px-0">
               <div className="grid md:grid-cols-12 gap-8 max-w-6xl mx-auto">
                 <div className="md:col-span-3">
                   <div className="text-[10px] font-black uppercase tracking-widest text-[#ff4d00] mb-2">{job.dates}</div>
@@ -188,12 +188,12 @@ export default function Home() {
                 </div>
                 <div className="md:col-span-9">
                   <div className="text-lg font-bold tracking-tight mb-4">{job.role}</div>
-                  <p className="text-md text-[#a1a1aa] mb-8 leading-relaxed max-w-2xl">{job.description}</p>
+                  <p className="text-md text-[var(--text-muted)] mb-8 leading-relaxed max-w-2xl">{job.description}</p>
                   <div className="grid sm:grid-cols-2 gap-4">
                     {job.achievements.map((item, i) => (
                       <div key={i} className="flex gap-4">
                         <span className="text-[10px] text-[#ff4d00] font-black mt-1">[{i + 1}]</span>
-                        <p className="text-sm text-[#ffffff] font-medium leading-normal">{item}</p>
+                        <p className="text-sm text-[var(--text-primary)] font-medium leading-normal">{item}</p>
                       </div>
                     ))}
                   </div>
