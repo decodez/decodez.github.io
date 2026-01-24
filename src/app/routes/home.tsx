@@ -1,5 +1,4 @@
-import { motion } from "framer-motion"
-import { ArrowRight, Layers, LineChart, Code2, Calendar, Cloud, Mail, Github, Linkedin, MapPin, FileText, Briefcase } from "lucide-react"
+import { ArrowRight, Layers, LineChart, Code2, Cloud, Mail, MapPin, FileText } from "lucide-react"
 
 const WORK_HISTORY = [
   {
@@ -67,92 +66,101 @@ const SKILLS = [
 
 export default function Home() {
   return (
-    <div className="container mx-auto px-4 py-16 sm:px-8 relative z-10 transition-colors duration-500 space-y-32">
-      {/* Hero */}
-      <section className="flex max-w-3xl flex-col gap-6 pt-12">
-        <h1 className="text-5xl font-extrabold tracking-tight text-[var(--text-primary)] sm:text-7xl">
-          Akhil Prasenan
-        </h1>
-        <h2 className="text-2xl font-medium text-[var(--text-secondary)] sm:text-3xl">
-          Lead / Principal-track Full Stack Engineer
-        </h2>
-        <p className="max-w-xl text-lg text-[var(--text-muted)]">
-          Specializing in scalable architecture, developer experience, and product-led engineering. 
-          I build systems that grow with the business.
-        </p>
-        
-        <div className="flex flex-wrap items-center gap-4 mt-4">
-          <motion.a
-            href="#work" 
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center gap-2 rounded-lg bg-[var(--text-primary)] px-6 py-3 text-sm font-semibold text-[var(--bg-color)] shadow-lg shadow-blue-500/10 transition-all hover:bg-[var(--text-primary)]/90"
-          >
-            <Briefcase className="h-4 w-4" />
-            View Experience
-            <ArrowRight className="h-4 w-4 opacity-70" />
-          </motion.a>
-
-          <motion.a 
-            href="/resume.pdf" 
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center gap-2 rounded-lg border border-[var(--glass-border)] bg-[var(--glass-bg)] px-6 py-3 text-sm font-semibold text-[var(--text-primary)] backdrop-blur-sm transition-all hover:bg-[var(--glass-bg-hover)]"
-          >
-            <FileText className="h-4 w-4 text-[var(--text-secondary)]" />
-            Resume
-          </motion.a>
-
-          <motion.a
-            href="#contact" 
-            whileHover={{ x: 3 }}
-            className="inline-flex items-center gap-2 px-4 py-3 text-sm font-semibold text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
-          >
-            <Mail className="h-4 w-4" />
-            Get in Touch
-          </motion.a>
+    <div className="te-grid-container transition-colors duration-500 min-h-screen">
+      {/* Hero Section */}
+      <section className="te-grid-item col-span-full py-32 flex flex-col justify-center">
+        <div className="max-w-4xl">
+          <h1 className="text-6xl font-black tracking-tighter sm:text-8xl mb-8 leading-[0.85]">
+            akhil prasenan
+          </h1>
+          <div className="flex flex-col sm:flex-row sm:items-baseline gap-4 mb-12">
+            <h2 className="text-xl font-bold tracking-tight text-[var(--text-secondary)] border-b-2 border-[var(--text-primary)] inline-block">
+              lead / principal-track full stack engineer
+            </h2>
+          </div>
+          <p className="max-w-xl text-lg font-medium tracking-tight text-[var(--text-muted)] mb-12">
+            specializing in scalable architecture, developer experience, and product-led engineering. 
+            i build systems that grow with the business.
+          </p>
+          
+          <div className="flex flex-wrap gap-0 border-t border-l border-[var(--border-color)] max-w-fit">
+            <a
+              href="#work" 
+              className="px-8 py-4 text-xs font-bold border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all flex items-center gap-2"
+            >
+              [ experience ] <ArrowRight className="h-3 w-3" />
+            </a>
+            <a 
+              href="/resume.pdf" 
+              className="px-8 py-4 text-xs font-bold border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all flex items-center gap-2"
+            >
+              [ resume ] <FileText className="h-3 w-3" />
+            </a>
+            <a
+              href="#contact" 
+              className="px-8 py-4 text-xs font-bold border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all flex items-center gap-2"
+            >
+              [ contact ] <Mail className="h-3 w-3" />
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Proof Grid */}
-      <section className="grid gap-6 sm:grid-cols-3">
-        <div className="group glass-card p-6">
-          <Layers className="mb-4 h-8 w-8 text-[#4facfe]" />
-          <h3 className="mb-2 text-lg font-bold text-[var(--text-primary)]">Architecture</h3>
-          <p className="text-sm text-[var(--text-secondary)]">Designing fault-tolerant distributed systems and scalable data models.</p>
-        </div>
-        <div className="group glass-card p-6">
-          <Code2 className="mb-4 h-8 w-8 text-[#00f2fe]" />
-          <h3 className="mb-2 text-lg font-bold text-[var(--text-primary)]">DX & CI/CD</h3>
-          <p className="text-sm text-[var(--text-secondary)]">Optimizing build pipelines and creating tooling that developers love.</p>
-        </div>
-        <div className="group glass-card p-6">
-          <LineChart className="mb-4 h-8 w-8 text-[#4facfe]" />
-          <h3 className="mb-2 text-lg font-bold text-[var(--text-primary)]">Data-Heavy Apps</h3>
-          <p className="text-sm text-[var(--text-secondary)]">Handling high throughput and visualizing complex datasets seamlessly.</p>
-        </div>
-      </section>
+      <div className="grid grid-cols-1 md:grid-cols-3 col-span-full te-grid-container">
+        <section className="te-grid-item group hover:bg-[#ff4d00]/5 transition-colors">
+          <div className="flex items-center gap-2 mb-6 text-[var(--text-muted)]">
+            <div className="h-0.5 w-6 bg-[var(--border-color)]" />
+            <span className="text-[10px] font-bold tracking-widest uppercase">01 / architecture</span>
+          </div>
+          <h3 className="text-2xl font-bold mb-4 tracking-tight">designing fault-tolerant distributed systems and scalable data models.</h3>
+          <Layers className="h-8 w-8 text-[var(--border-color)] opacity-20 group-hover:opacity-100 transition-opacity" />
+        </section>
+        
+        <section className="te-grid-item group hover:bg-[#ff4d00]/5 transition-colors border-l-0 md:border-l">
+          <div className="flex items-center gap-2 mb-6 text-[var(--text-muted)]">
+            <div className="h-0.5 w-6 bg-[var(--border-color)]" />
+            <span className="text-[10px] font-bold tracking-widest uppercase">02 / dx & ci/cd</span>
+          </div>
+          <h3 className="text-2xl font-bold mb-4 tracking-tight">optimizing build pipelines and creating tooling that developers love.</h3>
+          <Code2 className="h-8 w-8 text-[var(--border-color)] opacity-20 group-hover:opacity-100 transition-opacity" />
+        </section>
+
+        <section className="te-grid-item group hover:bg-[#ff4d00]/5 transition-colors border-l-0 md:border-l">
+          <div className="flex items-center gap-2 mb-6 text-[var(--text-muted)]">
+            <div className="h-0.5 w-6 bg-[var(--border-color)]" />
+            <span className="text-[10px] font-bold tracking-widest uppercase">03 / data engineering</span>
+          </div>
+          <h3 className="text-2xl font-bold mb-4 tracking-tight">handling high throughput and visualizing complex datasets seamlessly.</h3>
+          <LineChart className="h-8 w-8 text-[var(--border-color)] opacity-20 group-hover:opacity-100 transition-opacity" />
+        </section>
+      </div>
 
       {/* Toolbox Section */}
-      <section id="toolbox" className="scroll-mt-24">
-        <div className="mb-12 max-w-2xl">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-[var(--text-primary)]">Toolbox</h2>
-          <p className="text-lg text-[var(--text-secondary)]">
-            The technologies and tools I rely on to build scalable, production-ready software.
+      <section id="toolbox" className="te-grid-item col-span-full scroll-mt-14 pt-24 pb-32">
+        <div className="mb-16">
+          <div className="inline-block border-2 border-[var(--border-color)] px-4 py-1 mb-6 text-[10px] font-black uppercase tracking-widest bg-[var(--text-primary)] text-[var(--bg-color)]">
+            toolbox
+          </div>
+          <h2 className="text-4xl font-black tracking-tighter mb-4">technological stack / capabilities</h2>
+          <p className="text-lg text-[var(--text-muted)] max-w-xl">
+            a selection of instruments used for precision software engineering.
           </p>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-0 border-t border-l border-[var(--border-color)]">
           {SKILLS.map((group) => (
-            <div key={group.category} className="glass-card p-8">
-              <div className="mb-6 flex items-center gap-3">
-                <group.icon className="h-6 w-6 text-[#4facfe]" />
-                <h2 className="text-xl font-bold text-[var(--text-primary)]">{group.category}</h2>
+            <div key={group.category} className="border-r border-b border-[var(--border-color)] p-12 hover:bg-[var(--glass-bg-hover)] transition-colors">
+              <div className="mb-8 flex items-center gap-4">
+                <div className="p-2 border border-[var(--border-color)]">
+                  <group.icon className="h-5 w-5" />
+                </div>
+                <h3 className="text-xl font-bold tracking-tight">{group.category}</h3>
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-x-8 gap-y-4">
                 {group.items.map(skill => (
-                  <span key={skill} className="rounded-md border border-[var(--glass-border)] bg-[var(--glass-bg)] px-3 py-1.5 text-sm text-[var(--text-secondary)]">
-                    {skill}
+                  <span key={skill} className="text-sm font-bold tracking-tight text-[var(--text-primary)] flex items-center gap-2">
+                    <div className="h-1 w-1 bg-[#ff4d00]" /> {skill}
                   </span>
                 ))}
               </div>
@@ -162,89 +170,65 @@ export default function Home() {
       </section>
 
       {/* Work History Section */}
-      <section id="work" className="scroll-mt-24">
-        <h2 className="mb-16 text-3xl font-bold tracking-tight text-[var(--text-primary)]">Work History</h2>
-        <div className="relative border-l border-[var(--glass-border)] pl-8 ml-4 space-y-16 max-w-3xl">
+      <section id="work" className="te-grid-item col-span-full scroll-mt-14 pt-24 pb-32 bg-[var(--text-primary)] text-[var(--bg-color)]">
+        <div className="mb-16">
+          <div className="inline-block border-2 border-[var(--bg-color)] px-4 py-1 mb-6 text-[10px] font-black uppercase tracking-widest bg-[var(--bg-color)] text-[var(--text-primary)]">
+            work history
+          </div>
+          <h2 className="text-4xl font-black tracking-tighter mb-4">professional record / timeline</h2>
+        </div>
+
+        <div className="space-y-0 border-t border-[var(--bg-color)]">
           {WORK_HISTORY.map((job, index) => (
-            <div key={index} className="relative">
-              <div className="absolute -left-[41px] top-0 flex h-5 w-5 items-center justify-center rounded-full bg-[var(--bg-color)] backdrop-blur-sm ring-1 ring-[var(--glass-border)] transition-colors duration-500">
-                <div className="h-2 w-2 rounded-full bg-[#4facfe]" />
-              </div>
-              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
-                <h3 className="text-xl font-bold text-[var(--text-primary)]">{job.company}</h3>
-                <div className="mt-1 flex items-center text-sm font-medium text-[var(--text-muted)] sm:mt-0">
-                  <Calendar className="mr-1.5 h-3.5 w-3.5" />
-                  {job.dates}
+            <div key={index} className="border-b border-[var(--bg-color)] py-16 group hover:bg-[#ffffff]/5 transition-colors px-4 sm:px-0">
+              <div className="grid md:grid-cols-12 gap-8 max-w-6xl mx-auto">
+                <div className="md:col-span-3">
+                  <div className="text-[10px] font-black uppercase tracking-widest text-[#ff4d00] mb-2">{job.dates}</div>
+                  <h3 className="text-2xl font-black tracking-tighter">{job.company}</h3>
+                </div>
+                <div className="md:col-span-9">
+                  <div className="text-lg font-bold tracking-tight mb-4">{job.role}</div>
+                  <p className="text-md text-[#a1a1aa] mb-8 leading-relaxed max-w-2xl">{job.description}</p>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {job.achievements.map((item, i) => (
+                      <div key={i} className="flex gap-4">
+                        <span className="text-[10px] text-[#ff4d00] font-black mt-1">[{i + 1}]</span>
+                        <p className="text-sm text-[#ffffff] font-medium leading-normal">{item}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-              <div className="mt-2 text-lg font-medium text-[#4facfe]">{job.role}</div>
-              <p className="mt-4 text-[var(--text-secondary)]">{job.description}</p>
-              <ul className="mt-6 space-y-3">
-                {job.achievements.map((item, i) => (
-                  <li key={i} className="flex items-start text-sm text-[var(--text-secondary)]">
-                    <span className="mr-3 mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--text-muted)] opacity-50" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </div>
           ))}
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="scroll-mt-24 pb-24">
-        <div className="mx-auto max-w-4xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-6 text-3xl font-bold text-[var(--text-primary)]">Get in Touch</h2>
-            <p className="text-lg text-[var(--text-secondary)]">
-              I'm currently looking for new opportunities as a Staff or Principal Engineer. 
-              If you have an interesting problem to solve, I'd love to hear about it.
-            </p>
+      <section id="contact" className="te-grid-item col-span-full scroll-mt-14 pt-32 pb-48 border-b border-[var(--border-color)]">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-block border-2 border-[var(--border-color)] px-4 py-1 mb-12 text-[10px] font-black uppercase tracking-widest">
+            get in touch
           </div>
-
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <a 
-              href="mailto:hello@akhil.dev" 
-              className="group flex flex-col items-center justify-center glass-card p-8 hover:border-[#4facfe]/50 hover:bg-[#4facfe]/5"
-            >
-              <Mail className="mb-4 h-8 w-8 text-[var(--text-muted)] transition-colors group-hover:text-[#4facfe]" />
-              <h3 className="mb-1 font-bold text-[var(--text-primary)]">Email</h3>
-              <p className="text-xs text-[var(--text-secondary)]">hello@akhil.dev</p>
+          <h2 className="text-6xl sm:text-8xl font-black tracking-tighter mb-12 leading-[0.85]">
+            open for / collaboration.
+          </h2>
+          
+          <div className="flex flex-wrap justify-center gap-0 border-t border-l border-[var(--border-color)] max-w-fit mx-auto">
+            <a href="mailto:hello@akhil.dev" className="px-12 py-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all font-bold tracking-tight">
+              [ email ]
             </a>
-            <a 
-              href="https://linkedin.com/in/akhilprasenan" 
-              target="_blank" 
-              rel="noreferrer"
-              className="group flex flex-col items-center justify-center glass-card p-8 hover:border-[#0077b5]/50 hover:bg-[#0077b5]/5"
-            >
-              <Linkedin className="mb-4 h-8 w-8 text-[var(--text-muted)] transition-colors group-hover:text-[#0077b5]" />
-              <h3 className="mb-1 font-bold text-[var(--text-primary)]">LinkedIn</h3>
-              <p className="text-xs text-[var(--text-secondary)]">Connect with me</p>
+            <a href="https://linkedin.com/in/akhilprasenan" className="px-12 py-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all font-bold tracking-tight">
+              [ linkedin ]
             </a>
-            <a 
-              href="https://github.com/akhilprasenan" 
-              target="_blank" 
-              rel="noreferrer"
-              className="group flex flex-col items-center justify-center glass-card p-8 hover:border-[#e6edf3]/50 hover:bg-[#e6edf3]/5 dark:hover:bg-white/5 light:hover:bg-black/5"
-            >
-              <Github className="mb-4 h-8 w-8 text-[var(--text-muted)] transition-colors group-hover:text-[var(--text-primary)]" />
-              <h3 className="mb-1 font-bold text-[var(--text-primary)]">GitHub</h3>
-              <p className="text-xs text-[var(--text-secondary)]">Check out my code</p>
-            </a>
-            <a 
-              href="/resume.pdf"
-              className="group flex flex-col items-center justify-center glass-card p-8 hover:border-green-500/50 hover:bg-green-500/5"
-            >
-              <FileText className="mb-4 h-8 w-8 text-[var(--text-muted)] transition-colors group-hover:text-green-500" />
-              <h3 className="mb-1 font-bold text-[var(--text-primary)]">Resume</h3>
-              <p className="text-xs text-[var(--text-secondary)]">Download PDF</p>
+            <a href="https://github.com/akhilprasenan" className="px-12 py-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all font-bold tracking-tight">
+              [ github ]
             </a>
           </div>
 
-          <div className="mt-12 flex items-center justify-center text-[var(--text-muted)]">
-            <MapPin className="mr-2 h-4 w-4" />
-            <span>Singapore (Open to Remote)</span>
+          <div className="mt-16 flex items-center justify-center text-[var(--text-muted)] gap-2">
+            <MapPin className="h-4 w-4" />
+            <span className="text-[10px] font-black uppercase tracking-widest">singapore / remote-available</span>
           </div>
         </div>
       </section>

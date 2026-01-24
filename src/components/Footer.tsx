@@ -1,8 +1,13 @@
 export function Footer() {
   return (
-    <footer className="border-t border-[var(--glass-border)] py-8 text-center text-sm text-[var(--text-muted)] transition-colors duration-500">
-      <div className="container mx-auto px-4">
-        <p>&copy; {new Date().getFullYear()} Akhil Prasenan. Built with React, Vite & Tailwind.</p>
+    <footer className="border-t border-[var(--border-color)] py-12 bg-[var(--panel-bg)] transition-colors duration-500">
+      <div className="container mx-auto px-4 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <span className="text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)]">
+          © {new Date().getFullYear()} akhil prasenan / technical record.
+        </span>
+        <span className="text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)]">
+          built with precision / react + vite + tailwind
+        </span>
       </div>
     </footer>
   )

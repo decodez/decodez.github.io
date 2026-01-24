@@ -13,56 +13,46 @@ export function NavBar() {
   const location = useLocation()
 
   return (
-    <nav className="sticky top-0 z-40 w-full glass-panel transition-colors duration-500">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-8">
-        <Link to="/" className="text-lg font-bold tracking-tight text-[var(--text-primary)]">
-          Akhil.
+    <nav className="sticky top-0 z-40 w-full border-b border-[var(--border-color)] bg-[var(--panel-bg)] transition-colors duration-500">
+      <div className="container mx-auto flex h-14 items-center justify-between px-4 sm:px-8">
+        <Link to="/" className="text-xl font-bold tracking-tighter text-[var(--text-primary)]">
+          akhil.
         </Link>
-        <div className="flex items-center gap-6">
-          <div className="hidden md:flex md:gap-6">
+        <div className="flex h-full items-center">
+          <div className="hidden h-full items-center md:flex">
             {navItems.map((item) => {
               const isActive = location.pathname === "/" && location.hash === (item.href.includes("#") ? item.href.slice(1) : "")
               
+              const className = cn(
+                "flex h-full items-center px-4 text-xs font-bold tracking-tight transition-colors border-l border-[var(--border-color)] last:border-r",
+                isActive || (location.pathname === item.href) ? "bg-[var(--text-primary)] text-[var(--bg-color)]" : "text-[var(--text-primary)] hover:bg-[var(--glass-bg-hover)]"
+              )
+
               if (item.href.startsWith("/#")) {
                 return (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    className={cn(
-                      "text-sm font-medium transition-colors hover:text-[var(--text-primary)]",
-                      isActive ? "text-[var(--text-primary)]" : "text-[var(--text-secondary)]"
-                    )}
-                  >
+                  <a key={item.href} href={item.href} className={className}>
                     {item.label}
                   </a>
                 )
               }
 
               return (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  className={cn(
-                    "text-sm font-medium transition-colors hover:text-[var(--text-primary)]",
-                    location.pathname === item.href ? "text-[var(--text-primary)]" : "text-[var(--text-secondary)]"
-                  )}
-                >
+                <Link key={item.href} to={item.href} className={className}>
                   {item.label}
                 </Link>
               )
             })}
           </div>
           
-          <div className="flex items-center gap-3">
-            <ThemeToggle />
+          <div className="flex items-center gap-0 border-l border-[var(--border-color)] h-full">
+            <div className="px-3 border-r border-[var(--border-color)] h-full flex items-center">
+              <ThemeToggle />
+            </div>
             <button 
-              className="hidden items-center gap-2 rounded-md border border-white/10 bg-white/5 px-2 py-1.5 text-xs text-[var(--text-secondary)] transition-colors hover:bg-white/10 hover:text-[var(--text-primary)] dark:hover:bg-white/10 light:border-black/10 light:bg-black/5 light:hover:bg-black/10 md:flex"
+              className="flex h-full items-center gap-2 px-4 text-[10px] font-bold tracking-tight text-[var(--text-primary)] transition-colors hover:bg-[var(--glass-bg-hover)] border-r border-[var(--border-color)]"
               onClick={() => document.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', metaKey: true }))}
             >
-              <span>Search</span>
-              <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border border-white/10 bg-white/5 px-1.5 font-mono text-[10px] font-medium text-[var(--text-muted)] opacity-100">
-                <span className="text-xs">⌘</span>K
-              </kbd>
+              search [cmd+k]
             </button>
           </div>
         </div>
