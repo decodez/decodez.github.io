@@ -4,8 +4,8 @@ import { ThemeToggle } from "./ThemeToggle"
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/#work", label: "Work" },
   { href: "/#toolbox", label: "Toolbox" },
+  { href: "/#work", label: "Work" },
   { href: "/#contact", label: "Contact" },
 ]
 
@@ -44,12 +44,12 @@ export function NavBar() {
             })}
           </div>
           
-          <div className="flex items-center gap-0 border-l border-[var(--border-color)] h-full">
-            <div className="px-3 border-r border-[var(--border-color)] h-full flex items-center">
+          <div className="flex items-center border-l border-[var(--border-color)] h-full">
+            <div className="px-6 border-r border-[var(--border-color)] h-full flex items-center transition-colors hover:bg-[var(--glass-bg-hover)]">
               <ThemeToggle />
             </div>
             <button 
-              className="flex h-full items-center gap-2 px-4 text-[10px] font-bold tracking-tight text-[var(--text-primary)] transition-colors hover:bg-[var(--glass-bg-hover)] border-r border-[var(--border-color)]"
+              className="flex h-full items-center gap-2 px-6 text-[10px] font-bold tracking-tight text-[var(--text-primary)] transition-colors hover:bg-[var(--glass-bg-hover)] border-r border-[var(--border-color)]"
               onClick={() => document.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', metaKey: true }))}
             >
               search [cmd+k]
