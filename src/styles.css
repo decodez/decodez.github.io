@@ -59,6 +59,7 @@
   color-scheme: light dark;
   color: var(--text-primary);
   background-color: var(--bg-color);
+  scroll-behavior: smooth;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

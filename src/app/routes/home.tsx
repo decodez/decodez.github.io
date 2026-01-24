@@ -1,4 +1,5 @@
-import { ArrowRight, Layers, LineChart, Code2, Calendar, Cloud, Mail, Github, Linkedin, MapPin, FileText } from "lucide-react"
+import { motion } from "framer-motion"
+import { ArrowRight, Layers, LineChart, Code2, Calendar, Cloud, Mail, Github, Linkedin, MapPin, FileText, Briefcase } from "lucide-react"
 
 const WORK_HISTORY = [
   {
@@ -80,25 +81,36 @@ export default function Home() {
           I build systems that grow with the business.
         </p>
         
-        <div className="flex flex-wrap gap-4 mt-4">
-          <a
+        <div className="flex flex-wrap items-center gap-4 mt-4">
+          <motion.a
             href="#work" 
-            className="inline-flex items-center rounded-md bg-[var(--text-primary)] px-5 py-2.5 text-sm font-medium text-[var(--bg-color)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex items-center gap-2 rounded-lg bg-[var(--text-primary)] px-6 py-3 text-sm font-semibold text-[var(--bg-color)] shadow-lg shadow-blue-500/10 transition-all hover:bg-[var(--text-primary)]/90"
           >
-            View Work History <ArrowRight className="ml-2 h-4 w-4" />
-          </a>
-          <a 
+            <Briefcase className="h-4 w-4" />
+            View Experience
+            <ArrowRight className="h-4 w-4 opacity-70" />
+          </motion.a>
+
+          <motion.a 
             href="/resume.pdf" 
-            className="inline-flex items-center rounded-md border border-white/10 bg-white/5 dark:bg-white/5 dark:text-white light:bg-black/5 light:text-black light:border-black/10 px-5 py-2.5 text-sm font-medium transition-colors hover:bg-white/10"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex items-center gap-2 rounded-lg border border-[var(--glass-border)] bg-[var(--glass-bg)] px-6 py-3 text-sm font-semibold text-[var(--text-primary)] backdrop-blur-sm transition-all hover:bg-[var(--glass-bg-hover)]"
           >
-            Download Resume
-          </a>
-          <a
+            <FileText className="h-4 w-4 text-[var(--text-secondary)]" />
+            Resume
+          </motion.a>
+
+          <motion.a
             href="#contact" 
-            className="inline-flex items-center rounded-md px-5 py-2.5 text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+            whileHover={{ x: 3 }}
+            className="inline-flex items-center gap-2 px-4 py-3 text-sm font-semibold text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
           >
-            Contact
-          </a>
+            <Mail className="h-4 w-4" />
+            Get in Touch
+          </motion.a>
         </div>
       </section>
 
