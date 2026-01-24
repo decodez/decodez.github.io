@@ -1,4 +1,4 @@
-import { ArrowRight, Layers, LineChart, Code2, Cloud, Mail, MapPin, FileText } from "lucide-react"
+import { Briefcase, Layers, LineChart, Code2, Cloud, Mail, MapPin, FileText } from "lucide-react"
 
 const WORK_HISTORY = [
   {
@@ -88,7 +88,7 @@ export default function Home() {
               href="#work" 
               className="px-8 py-4 text-xs font-bold border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all flex items-center gap-2"
             >
-              [ experience ] <ArrowRight className="h-3 w-3" />
+              [ experience ] <Briefcase className="h-3 w-3" />
             </a>
             <a 
               href="/resume.pdf" 
