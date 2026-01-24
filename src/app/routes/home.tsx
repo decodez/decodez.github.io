@@ -215,13 +215,13 @@ export default function Home() {
           </h2>
           
           <div className="flex flex-wrap justify-center gap-0 border-t border-l border-[var(--border-color)] max-w-fit mx-auto">
-            <a href="mailto:hello@akhil.dev" className="px-12 py-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all font-bold tracking-tight">
+            <a href="mailto:akhil_prasenan@outlook.com" className="px-12 py-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all font-bold tracking-tight">
               [ email ]
             </a>
             <a href="https://linkedin.com/in/akhilprasenan" className="px-12 py-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all font-bold tracking-tight">
               [ linkedin ]
             </a>
-            <a href="https://github.com/akhilprasenan" className="px-12 py-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all font-bold tracking-tight">
+            <a href="https://github.com/decodez" className="px-12 py-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all font-bold tracking-tight">
               [ github ]
             </a>
           </div>
