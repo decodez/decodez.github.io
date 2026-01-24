@@ -4,9 +4,9 @@ import { ThemeToggle } from "./ThemeToggle"
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/work", label: "Work" },
-  { href: "/toolbox", label: "Toolbox" },
-  { href: "/contact", label: "Contact" },
+  { href: "/#work", label: "Work" },
+  { href: "/#toolbox", label: "Toolbox" },
+  { href: "/#contact", label: "Contact" },
 ]
 
 export function NavBar() {
