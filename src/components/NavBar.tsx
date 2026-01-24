@@ -21,14 +21,30 @@ export function NavBar() {
         <div className="flex items-center gap-6">
           <div className="hidden md:flex md:gap-6">
             {navItems.map((item) => {
-              const isActive = location.pathname === item.href || (item.href !== '/' && location.pathname.startsWith(item.href))
+              const isActive = location.pathname === "/" && location.hash === (item.href.includes("#") ? item.href.slice(1) : "")
+              
+              if (item.href.startsWith("/#")) {
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className={cn(
+                      "text-sm font-medium transition-colors hover:text-[var(--text-primary)]",
+                      isActive ? "text-[var(--text-primary)]" : "text-[var(--text-secondary)]"
+                    )}
+                  >
+                    {item.label}
+                  </a>
+                )
+              }
+
               return (
                 <Link
                   key={item.href}
                   to={item.href}
                   className={cn(
                     "text-sm font-medium transition-colors hover:text-[var(--text-primary)]",
-                    isActive ? "text-[var(--text-primary)]" : "text-[var(--text-secondary)]"
+                    location.pathname === item.href ? "text-[var(--text-primary)]" : "text-[var(--text-secondary)]"
                   )}
                 >
                   {item.label}
