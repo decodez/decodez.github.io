@@ -7,9 +7,9 @@ export function ThemeToggle() {
 
   return (
     <div className="flex items-center gap-2">
-      <Sun className={cn("h-4 w-4 transition-all", theme === "light" ? "text-[#ff4d00]" : "text-[var(--text-muted)]")} />
+      <Sun className={cn("h-4 w-4 transition-all", theme === "light" ? "text-[#ff0000]" : "text-[var(--text-muted)]")} />
       <div className="h-4 w-[1px] bg-[var(--border-color)] rotate-12" />
-      <Moon className={cn("h-4 w-4 transition-all", theme === "dark" ? "text-[#ff4d00]" : "text-[var(--text-muted)]")} />
+      <Moon className={cn("h-4 w-4 transition-all", theme === "dark" ? "text-[#ff0000]" : "text-[var(--text-muted)]")} />
     </div>
   )
 }

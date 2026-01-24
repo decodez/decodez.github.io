@@ -61,7 +61,7 @@ export default function CaseStudyDetail() {
           <h1 className="text-5xl font-black tracking-tighter sm:text-7xl mb-8 leading-[0.85] max-w-4xl">
             {study.title}
           </h1>
-          <p className="text-2xl font-bold tracking-tight text-[#ff4d00] mb-12 max-w-2xl">
+          <p className="text-2xl font-bold tracking-tight text-[#ff0000] mb-12 max-w-2xl">
             {study.impactLine}
           </p>
 
@@ -104,7 +104,7 @@ export default function CaseStudyDetail() {
                 className={cn(
                   "flex items-center gap-3 py-2 text-xs font-bold tracking-tight transition-all group",
                   activeSection === section.id 
-                    ? "text-[#ff4d00]" 
+                    ? "text-[#ff0000]" 
                     : "text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:translate-x-1"
                 )}
                 onClick={(e) => {
@@ -123,7 +123,7 @@ export default function CaseStudyDetail() {
         <div className="lg:col-span-9 p-8 sm:p-16 space-y-32 lowercase">
           <section id="problem" className="scroll-mt-32">
             <div className="flex items-center gap-4 mb-8">
-              <div className="h-0.5 w-12 bg-[#ff4d00]" />
+              <div className="h-0.5 w-12 bg-[#ff0000]" />
               <h2 className="text-3xl font-black tracking-tighter">01 / the problem scope</h2>
             </div>
             <p className="text-xl font-medium tracking-tight leading-relaxed text-[var(--text-primary)] max-w-3xl border-l-[4px] border-[var(--border-color)] pl-8 py-2">
@@ -133,13 +133,13 @@ export default function CaseStudyDetail() {
 
           <section id="constraints" className="scroll-mt-32">
              <div className="flex items-center gap-4 mb-8">
-              <div className="h-0.5 w-12 bg-[#ff4d00]" />
+              <div className="h-0.5 w-12 bg-[#ff0000]" />
               <h2 className="text-3xl font-black tracking-tighter">02 / technical limits</h2>
             </div>
             <div className="grid sm:grid-cols-2 gap-0 border-t border-l border-[var(--border-color)]">
               {study.constraints.map((constraint, i) => (
                 <div key={i} className="flex items-start gap-4 p-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--glass-bg-hover)] transition-colors">
-                  <AlertTriangle className="h-4 w-4 shrink-0 text-[#ff4d00] mt-1" />
+                  <AlertTriangle className="h-4 w-4 shrink-0 text-[#ff0000] mt-1" />
                   <span className="text-sm font-bold tracking-tight leading-normal">{constraint}</span>
                 </div>
               ))}
@@ -148,7 +148,7 @@ export default function CaseStudyDetail() {
 
           <section id="decisions" className="scroll-mt-32">
              <div className="flex items-center gap-4 mb-8">
-              <div className="h-0.5 w-12 bg-[#ff4d00]" />
+              <div className="h-0.5 w-12 bg-[#ff0000]" />
               <h2 className="text-3xl font-black tracking-tighter">03 / architecture log</h2>
             </div>
             <div className="space-y-0 border-t border-[var(--border-color)]">
@@ -156,7 +156,7 @@ export default function CaseStudyDetail() {
                 <div key={i} className="py-12 border-b border-[var(--border-color)] group hover:bg-[var(--glass-bg-hover)] transition-colors px-4">
                   <div className="grid md:grid-cols-12 gap-8 max-w-5xl mx-auto">
                     <div className="md:col-span-4">
-                       <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-[#ff4d00] mb-4">
+                       <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-[#ff0000] mb-4">
                         <Scale className="h-3.5 w-3.5" /> decision / track-{i+1}
                       </div>
                       <h3 className="text-2xl font-black tracking-tighter leading-tight">{decision.title}</h3>
@@ -174,13 +174,13 @@ export default function CaseStudyDetail() {
 
           <section id="implementation" className="scroll-mt-32">
              <div className="flex items-center gap-4 mb-8">
-              <div className="h-0.5 w-12 bg-[#ff4d00]" />
+              <div className="h-0.5 w-12 bg-[#ff0000]" />
               <h2 className="text-3xl font-black tracking-tighter">04 / deployment specs</h2>
             </div>
             <div className="grid gap-4">
               {study.implementationNotes.map((note, i) => (
-                <div key={i} className="flex items-center gap-6 p-6 border border-[var(--border-color)] hover:border-[#ff4d00] transition-colors group">
-                  <div className="text-[10px] font-black text-[#ff4d00] opacity-50 group-hover:opacity-100">[{i + 1}]</div>
+                <div key={i} className="flex items-center gap-6 p-6 border border-[var(--border-color)] hover:border-[#ff0000] transition-colors group">
+                  <div className="text-[10px] font-black text-[#ff0000] opacity-50 group-hover:opacity-100">[{i + 1}]</div>
                   <span className="text-md font-bold tracking-tight">{note}</span>
                 </div>
               ))}
@@ -189,14 +189,14 @@ export default function CaseStudyDetail() {
 
           <section id="results" className="scroll-mt-32">
              <div className="flex items-center gap-4 mb-8">
-              <div className="h-0.5 w-12 bg-[#ff4d00]" />
+              <div className="h-0.5 w-12 bg-[#ff0000]" />
               <h2 className="text-3xl font-black tracking-tighter">05 / impact metrics</h2>
             </div>
             <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-0 border-t border-l border-[var(--border-color)]">
               {study.results.map((result, i) => (
-                <div key={i} className="p-10 border-r border-b border-[var(--border-color)] text-center hover:bg-[#ff4d00]/5 transition-colors">
+                <div key={i} className="p-10 border-r border-b border-[var(--border-color)] text-center hover:bg-[#ff0000]/5 transition-colors">
                    <div className="text-[8px] font-black uppercase tracking-widest text-[var(--text-muted)] mb-6">metric / 0{i+1}</div>
-                   <CheckCircle2 className="mx-auto mb-6 h-10 w-10 text-[#ff4d00]" />
+                   <CheckCircle2 className="mx-auto mb-6 h-10 w-10 text-[#ff0000]" />
                    <p className="text-xl font-black tracking-tighter leading-tight">{result}</p>
                 </div>
               ))}
@@ -205,23 +205,23 @@ export default function CaseStudyDetail() {
 
           <section id="tradeoffs" className="scroll-mt-32 pb-32">
              <div className="flex items-center gap-4 mb-8">
-              <div className="h-0.5 w-12 bg-[#ff4d00]" />
+              <div className="h-0.5 w-12 bg-[#ff0000]" />
               <h2 className="text-3xl font-black tracking-tighter">06 / analysis & lessons</h2>
             </div>
             <div className="te-border p-12 bg-[var(--text-primary)] text-[var(--bg-color)]">
               <div className="grid md:grid-cols-2 gap-16">
                  <div>
-                    <div className="text-[10px] font-black uppercase tracking-widest text-[#ff4d00] mb-8">log / tradeoffs</div>
+                    <div className="text-[10px] font-black uppercase tracking-widest text-[#ff0000] mb-8">log / tradeoffs</div>
                     <ul className="space-y-6">
                       {study.tradeoffs.map((tradeoff, i) => (
                         <li key={i} className="text-sm font-bold tracking-tight leading-relaxed flex gap-4">
-                          <div className="h-1.5 w-1.5 shrink-0 bg-[#ff4d00] mt-1.5" /> {tradeoff}
+                          <div className="h-1.5 w-1.5 shrink-0 bg-[#ff0000] mt-1.5" /> {tradeoff}
                         </li>
                       ))}
                     </ul>
                  </div>
                  <div className="border-t md:border-t-0 md:border-l border-[#ffffff]/10 pt-16 md:pt-0 md:pl-16">
-                    <div className="text-[10px] font-black uppercase tracking-widest text-[#ff4d00] mb-8">log / future-iterations</div>
+                    <div className="text-[10px] font-black uppercase tracking-widest text-[#ff0000] mb-8">log / future-iterations</div>
                     <ul className="space-y-6">
                       {study.nextImprovements.map((imp, i) => (
                         <li key={i} className="text-sm font-bold tracking-tight leading-relaxed flex gap-4">

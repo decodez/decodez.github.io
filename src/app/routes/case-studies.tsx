@@ -50,7 +50,7 @@ export default function CaseStudies() {
       {/* Control Panel Section */}
       <section className="te-grid-item col-span-full py-0 te-grid-container grid grid-cols-1 lg:grid-cols-12 sticky top-14 z-30 bg-[var(--bg-color)]">
         <div className="lg:col-span-4 p-8 border-b lg:border-b-0 lg:border-r border-[var(--border-color)] flex items-center gap-4 group">
-          <Search className="h-4 w-4 text-[var(--text-muted)] group-focus-within:text-[#ff4d00] transition-colors" />
+          <Search className="h-4 w-4 text-[var(--text-muted)] group-focus-within:text-[#ff0000] transition-colors" />
           <input 
             type="text"
             placeholder="search catalog..."
@@ -82,7 +82,7 @@ export default function CaseStudies() {
             {activeTags.length > 0 && (
               <button 
                 onClick={() => setActiveTags([])}
-                className="px-3 py-1 text-[8px] font-black uppercase tracking-widest bg-[#ff4d00]/10 text-[#ff4d00] border border-[#ff4d00]/30 hover:bg-[#ff4d00] hover:text-white transition-all flex items-center gap-2"
+                className="px-3 py-1 text-[8px] font-black uppercase tracking-widest bg-[#ff0000]/10 text-[#ff0000] border border-[#ff0000]/30 hover:bg-[#ff0000] hover:text-white transition-all flex items-center gap-2"
                 title="Clear filters"
               >
                 <X className="h-3 w-3" /> clear all
