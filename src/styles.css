@@ -2,7 +2,7 @@
 
 @theme {
   --font-sans: "Inter", system-ui, sans-serif;
-  --color-primary: #ff0000; /* te-red */
+  --color-primary: #ff4d00; /* te-orange */
 }
 
 /* Custom Utilities */

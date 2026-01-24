@@ -108,7 +108,7 @@ export default function Home() {
 
       {/* Proof Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 col-span-full te-grid-container">
-        <section className="te-grid-item group hover:bg-[#ff0000]/5 transition-colors">
+        <section className="te-grid-item group hover:bg-[#ff4d00]/5 transition-colors">
           <div className="flex items-center gap-2 mb-6 text-[var(--text-muted)]">
             <div className="h-0.5 w-6 bg-[var(--border-color)]" />
             <span className="text-[10px] font-bold tracking-widest uppercase">01 / architecture</span>
@@ -117,7 +117,7 @@ export default function Home() {
           <Layers className="h-8 w-8 text-[var(--border-color)] opacity-20 group-hover:opacity-100 transition-opacity" />
         </section>
         
-        <section className="te-grid-item group hover:bg-[#ff0000]/5 transition-colors border-l-0 md:border-l">
+        <section className="te-grid-item group hover:bg-[#ff4d00]/5 transition-colors border-l-0 md:border-l">
           <div className="flex items-center gap-2 mb-6 text-[var(--text-muted)]">
             <div className="h-0.5 w-6 bg-[var(--border-color)]" />
             <span className="text-[10px] font-bold tracking-widest uppercase">02 / dx & ci/cd</span>
@@ -126,7 +126,7 @@ export default function Home() {
           <Code2 className="h-8 w-8 text-[var(--border-color)] opacity-20 group-hover:opacity-100 transition-opacity" />
         </section>
 
-        <section className="te-grid-item group hover:bg-[#ff0000]/5 transition-colors border-l-0 md:border-l">
+        <section className="te-grid-item group hover:bg-[#ff4d00]/5 transition-colors border-l-0 md:border-l">
           <div className="flex items-center gap-2 mb-6 text-[var(--text-muted)]">
             <div className="h-0.5 w-6 bg-[var(--border-color)]" />
             <span className="text-[10px] font-bold tracking-widest uppercase">03 / data engineering</span>
@@ -160,7 +160,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-x-8 gap-y-4">
                 {group.items.map(skill => (
                   <span key={skill} className="text-sm font-bold tracking-tight text-[var(--text-primary)] flex items-center gap-2">
-                    <div className="h-1 w-1 bg-[#ff0000]" /> {skill}
+                    <div className="h-1 w-1 bg-[#ff4d00]" /> {skill}
                   </span>
                 ))}
               </div>
@@ -183,7 +183,7 @@ export default function Home() {
             <div key={index} className="border-b border-[var(--border-color)] py-16 group hover:bg-[var(--text-primary)]/5 transition-colors px-4 sm:px-0">
               <div className="grid md:grid-cols-12 gap-8 max-w-6xl mx-auto">
                 <div className="md:col-span-3">
-                  <div className="text-[10px] font-black uppercase tracking-widest text-[#ff0000] mb-2">{job.dates}</div>
+                  <div className="text-[10px] font-black uppercase tracking-widest text-[#ff4d00] mb-2">{job.dates}</div>
                   <h3 className="text-2xl font-black tracking-tighter">{job.company}</h3>
                 </div>
                 <div className="md:col-span-9">
@@ -192,7 +192,7 @@ export default function Home() {
                   <div className="grid sm:grid-cols-2 gap-4">
                     {job.achievements.map((item, i) => (
                       <div key={i} className="flex gap-4">
-                        <span className="text-[10px] text-[#ff0000] font-black mt-1">[{i + 1}]</span>
+                        <span className="text-[10px] text-[#ff4d00] font-black mt-1">[{i + 1}]</span>
                         <p className="text-sm text-[var(--text-primary)] font-medium leading-normal">{item}</p>
                       </div>
                     ))}
