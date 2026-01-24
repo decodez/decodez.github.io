@@ -66,7 +66,7 @@ const SKILLS = [
 
 export default function Home() {
   return (
-    <div className="container mx-auto px-4 sm:px-8 te-grid-container border-r transition-colors duration-500 min-h-screen">
+    <div className="te-grid-container transition-colors duration-500 min-h-screen">
       {/* Hero Section */}
       <section className="te-grid-item col-span-full py-32 flex flex-col justify-center">
         <div className="max-w-4xl">
