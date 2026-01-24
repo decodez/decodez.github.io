@@ -45,9 +45,13 @@ export function NavBar() {
           </div>
           
           <div className="flex items-center border-l border-[var(--border-color)] h-full">
-            <div className="px-6 border-r border-[var(--border-color)] h-full flex items-center transition-colors hover:bg-[var(--glass-bg-hover)]">
+            <button 
+              className="px-6 border-r border-[var(--border-color)] h-full flex items-center transition-colors hover:bg-[var(--glass-bg-hover)]"
+              onClick={() => document.dispatchEvent(new CustomEvent('toggle-theme'))}
+              aria-label="toggle theme"
+            >
               <ThemeToggle />
-            </div>
+            </button>
             <button 
               className="flex h-full items-center gap-2 px-6 text-[10px] font-bold tracking-tight text-[var(--text-primary)] transition-colors hover:bg-[var(--glass-bg-hover)] border-r border-[var(--border-color)]"
               onClick={() => document.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', metaKey: true }))}
