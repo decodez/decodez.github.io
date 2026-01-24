@@ -116,7 +116,7 @@ export default function CaseStudies() {
 
       {/* Footer Industrial Strip */}
       <div className="col-span-full te-grid-item py-1 bg-[var(--text-primary)] flex items-center justify-center">
-         <span className="text-[8px] font-black uppercase tracking-[0.2em] text-[var(--bg-color)]">end of archive / teenage engineering industrial-standard</span>
+         <span className="text-[8px] font-black uppercase tracking-[0.2em] text-[var(--bg-color)]">end of archive / technical-standard specification</span>
       </div>
     </div>
   )

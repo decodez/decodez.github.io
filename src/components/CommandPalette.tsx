@@ -63,7 +63,7 @@ export function CommandPalette() {
             </Command.Group>
 
             <div className="te-grid-item py-1 bg-[var(--text-primary)] flex items-center justify-center">
-               <span className="text-[8px] font-black uppercase tracking-[0.2em] text-[var(--bg-color)]">teenage engineering / industrial-search</span>
+               <span className="text-[8px] font-black uppercase tracking-[0.2em] text-[var(--bg-color)]">system / industrial-search</span>
             </div>
           </Command.List>
         </Command>
