@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom"
 import { ArrowRight, Layers, LineChart, Code2 } from "lucide-react"
-import { getAllCaseStudies } from "@/lib/content"
-import { CaseStudyCard } from "@/components/CaseStudyCard"
 
 export default function Home() {
-  const caseStudies = getAllCaseStudies().slice(0, 3)
 
   return (
     <div className="container mx-auto px-4 py-16 sm:px-8 relative z-10 transition-colors duration-500">
@@ -23,10 +20,10 @@ export default function Home() {
         
         <div className="flex flex-wrap gap-4 mt-4">
           <Link 
-            to="/case-studies" 
+            to="/work" 
             className="inline-flex items-center rounded-md bg-[var(--text-primary)] px-5 py-2.5 text-sm font-medium text-[var(--bg-color)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
           >
-            View Case Studies <ArrowRight className="ml-2 h-4 w-4" />
+            View Work History <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
           <a 
             href="/resume.pdf" 
@@ -59,31 +56,6 @@ export default function Home() {
           <LineChart className="mb-4 h-8 w-8 text-[#4facfe]" />
           <h3 className="mb-2 text-lg font-bold text-[var(--text-primary)]">Data-Heavy Apps</h3>
           <p className="text-sm text-[var(--text-secondary)]">Handling high throughput and visualizing complex datasets seamlessly.</p>
-        </div>
-      </section>
-
-      {/* Featured Case Studies */}
-      <section className="mb-24">
-        <div className="mb-8 flex items-end justify-between">
-          <div>
-            <h2 className="text-3xl font-bold text-[var(--text-primary)]">Featured Work</h2>
-            <p className="mt-2 text-[var(--text-secondary)]">Deep dives into complex technical challenges.</p>
-          </div>
-          <Link to="/case-studies" className="hidden text-sm font-medium text-[#4facfe] hover:underline sm:block">
-            View all case studies
-          </Link>
-        </div>
-        
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {caseStudies.map(study => (
-            <CaseStudyCard key={study.slug} study={study} />
-          ))}
-        </div>
-        
-        <div className="mt-8 text-center sm:hidden">
-           <Link to="/case-studies" className="text-sm font-medium text-[#4facfe]">
-            View all case studies →
-          </Link>
         </div>
       </section>
 
