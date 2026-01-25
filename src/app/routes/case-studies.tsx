@@ -36,13 +36,13 @@ export default function CaseStudies() {
       <section className="te-grid-item col-span-full py-24 flex flex-col justify-center">
         <div className="max-w-4xl ">
           <div className="inline-block border-2 border-[var(--border-color)] px-4 py-1 mb-8 text-[10px] font-black uppercase tracking-widest bg-[var(--text-primary)] text-[var(--bg-color)]">
-            technical archive
+            Technical Archive
           </div>
           <h1 className="text-6xl font-black tracking-tighter sm:text-8xl mb-8 leading-[0.85]">
-            case studies
+            Case Studies
           </h1>
           <p className="max-w-xl text-lg font-medium tracking-tight text-[var(--text-muted)]">
-            detailed records of architectural decisions, technical trade-offs, and industrial-scale engineering impact.
+            Detailed records of architectural decisions, technical trade-offs, and industrial-scale engineering impact.
           </p>
         </div>
       </section>
@@ -53,7 +53,7 @@ export default function CaseStudies() {
           <Search className="h-4 w-4 text-[var(--text-muted)] group-focus-within:text-[#ff4d00] transition-colors" />
           <input 
             type="text"
-            placeholder="search catalog..."
+            placeholder="Search catalog..."
             className="w-full bg-transparent text-xs font-bold tracking-tight outline-none placeholder:text-[var(--text-muted)] "
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -62,7 +62,7 @@ export default function CaseStudies() {
         
         <div className="lg:col-span-8 p-8 flex flex-wrap items-center gap-2">
           <div className="flex items-center text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)] mr-4">
-            <SlidersHorizontal className="mr-2 h-3.5 w-3.5" /> filter /
+            <SlidersHorizontal className="mr-2 h-3.5 w-3.5" /> Filter /
           </div>
           <div className="flex flex-wrap gap-2">
             {ALL_TAGS.map(tag => (
@@ -85,7 +85,7 @@ export default function CaseStudies() {
                 className="px-3 py-1 text-[8px] font-black uppercase tracking-widest bg-[#ff4d00]/10 text-[#ff4d00] border border-[#ff4d00]/30 hover:bg-[#ff4d00] hover:text-white transition-all flex items-center gap-2"
                 title="Clear filters"
               >
-                <X className="h-3 w-3" /> clear all
+                <X className="h-3 w-3" /> Clear All
               </button>
             )}
           </div>
@@ -102,13 +102,13 @@ export default function CaseStudies() {
           ))
         ) : (
           <section className="te-grid-item col-span-full py-32 text-center ">
-            <div className="text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)] mb-4">result / zero</div>
-            <p className="text-xl font-bold tracking-tight mb-8">no technical records match the current parameters.</p>
+            <div className="text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)] mb-4">Result / Zero</div>
+            <p className="text-xl font-bold tracking-tight mb-8">No technical records match the current parameters.</p>
             <button 
               onClick={() => {setSearchQuery(""); setActiveTags([])}}
               className="px-8 py-4 text-xs font-bold border border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all"
             >
-              [ reset instruments ]
+              [ Reset Instruments ]
             </button>
           </section>
         )}
@@ -116,7 +116,7 @@ export default function CaseStudies() {
 
       {/* Footer Industrial Strip */}
       <div className="col-span-full te-grid-item py-1 bg-[var(--text-primary)] flex items-center justify-center">
-         <span className="text-[8px] font-black uppercase tracking-[0.2em] text-[var(--bg-color)]">end of archive / technical-standard specification</span>
+         <span className="text-[8px] font-black uppercase tracking-[0.2em] text-[var(--bg-color)]">End of Archive / Technical-Standard Specification</span>
       </div>
     </div>
   )

@@ -17,7 +17,7 @@ export function NavBar() {
     <nav className="sticky top-0 z-40 w-full border-b border-[var(--border-color)] bg-[var(--panel-bg)] transition-colors duration-500">
       <div className="flex h-14 items-center justify-between pl-8 pr-0">
         <Link to="/" className="text-xl font-bold tracking-tighter text-[var(--text-primary)]">
-          akhil.
+          Akhil.
         </Link>
         <div className="flex h-full items-center">
           <div className="hidden h-full items-center md:flex">
@@ -57,7 +57,7 @@ export function NavBar() {
               className="flex h-full items-center gap-2 px-6 text-[10px] font-bold tracking-tight text-[var(--text-primary)] transition-colors hover:bg-[var(--glass-bg-hover)] border-r border-[var(--border-color)]"
               onClick={() => document.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', metaKey: true }))}
             >
-              search [cmd+k]
+              Search [Cmd+K]
             </button>
           </div>
         </div>

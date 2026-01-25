@@ -89,19 +89,19 @@ export default function Home() {
               href="#work" 
               className="px-8 py-4 text-xs font-bold border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all flex items-center gap-2"
             >
-              [ experience ] <Briefcase className="h-3 w-3" />
+              [ Experience ] <Briefcase className="h-3 w-3" />
             </a>
             <a 
               href="/resume.pdf" 
               className="px-8 py-4 text-xs font-bold border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all flex items-center gap-2"
             >
-              [ resume ] <FileText className="h-3 w-3" />
+              [ Resume ] <FileText className="h-3 w-3" />
             </a>
             <a
               href="#contact" 
               className="px-8 py-4 text-xs font-bold border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all flex items-center gap-2"
             >
-              [ contact ] <Mail className="h-3 w-3" />
+              [ Contact ] <Mail className="h-3 w-3" />
             </a>
           </div>
         </div>
@@ -112,25 +112,25 @@ export default function Home() {
         <section className="te-grid-item group hover:bg-[#ff4d00]/5 transition-colors">
           <div className="flex items-center gap-2 mb-6 text-[var(--text-muted)]">
             <div className="h-0.5 w-6 bg-[var(--border-color)]" />
-            <span className="text-[10px] font-bold tracking-widest uppercase">01 / architecture</span>
+            <span className="text-[10px] font-bold tracking-widest uppercase">01 / Architecture</span>
           </div>
-          <h3 className="text-2xl font-bold mb-4 tracking-tight">designing fault-tolerant distributed systems and scalable data models.</h3>
+          <h3 className="text-2xl font-bold mb-4 tracking-tight">Designing fault-tolerant distributed systems and scalable data models.</h3>
           <Layers className="h-8 w-8 text-[var(--border-color)] opacity-20 group-hover:opacity-100 transition-opacity" />
         </section>
         
         <section className="te-grid-item group hover:bg-[#ff4d00]/5 transition-colors border-l-0 md:border-l">
           <div className="flex items-center gap-2 mb-6 text-[var(--text-muted)]">
             <div className="h-0.5 w-6 bg-[var(--border-color)]" />
-            <span className="text-[10px] font-bold tracking-widest uppercase">02 / dx & ci/cd</span>
+            <span className="text-[10px] font-bold tracking-widest uppercase">02 / DX & CI/CD</span>
           </div>
-          <h3 className="text-2xl font-bold mb-4 tracking-tight">optimizing build pipelines and creating tooling that developers love.</h3>
+          <h3 className="text-2xl font-bold mb-4 tracking-tight">Optimizing build pipelines and creating tooling that developers love.</h3>
           <Code2 className="h-8 w-8 text-[var(--border-color)] opacity-20 group-hover:opacity-100 transition-opacity" />
         </section>
 
         <section className="te-grid-item group hover:bg-[#ff4d00]/5 transition-colors border-l-0 md:border-l">
           <div className="flex items-center gap-2 mb-6 text-[var(--text-muted)]">
             <div className="h-0.5 w-6 bg-[var(--border-color)]" />
-            <span className="text-[10px] font-bold tracking-widest uppercase">03 / data engineering</span>
+            <span className="text-[10px] font-bold tracking-widest uppercase">03 / Data Engineering</span>
           </div>
           <h3 className="text-2xl font-bold mb-4 tracking-tight">Handling high-throughput pipelines and visualizing complex datasets seamlessly.</h3>
           <LineChart className="h-8 w-8 text-[var(--border-color)] opacity-20 group-hover:opacity-100 transition-opacity" />
@@ -143,9 +143,9 @@ export default function Home() {
           <div className="inline-block border-2 border-[var(--border-color)] px-4 py-1 mb-6 text-[10px] font-black uppercase tracking-widest bg-[var(--text-primary)] text-[var(--bg-color)]">
             toolbox
           </div>
-          <h2 className="text-4xl font-black tracking-tighter mb-4">technological stack / capabilities</h2>
+          <h2 className="text-4xl font-black tracking-tighter mb-4">Technological Stack / Capabilities</h2>
           <p className="text-lg text-[var(--text-muted)] max-w-xl">
-            a selection of instruments used for precision software engineering.
+            A selection of instruments used for precision software engineering.
           </p>
         </div>
 
@@ -176,9 +176,9 @@ export default function Home() {
           <div className="inline-block border-2 border-[var(--border-color)] px-4 py-1 mb-6 text-[10px] font-black uppercase tracking-widest bg-[var(--text-primary)] text-[var(--bg-color)]">
             selected case studies
           </div>
-          <h2 className="text-4xl font-black tracking-tighter mb-4">technical records / deep-dives</h2>
+          <h2 className="text-4xl font-black tracking-tighter mb-4">Technical Records / Deep-Dives</h2>
           <p className="text-lg text-[var(--text-muted)] max-w-xl">
-            a curated selection of projects focusing on architectural trade-offs and engineering impact.
+            A curated selection of projects focusing on architectural trade-offs and engineering impact.
           </p>
         </div>
 
@@ -195,7 +195,7 @@ export default function Home() {
             href="/case-studies"
             className="px-8 py-4 text-xs font-bold border border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all inline-flex items-center gap-2"
           >
-            [ view all technical records ] <FileText className="h-3 w-3" />
+            [ View All Technical Records ] <FileText className="h-3 w-3" />
           </a>
         </div>
       </section>
@@ -247,19 +247,19 @@ export default function Home() {
           
           <div className="flex flex-wrap justify-center gap-0 border-t border-l border-[var(--border-color)] max-w-fit mx-auto">
             <a href="mailto:akhil_prasenan@outlook.com" className="px-12 py-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all font-bold tracking-tight">
-              [ email ]
+              [ Email ]
             </a>
             <a href="https://linkedin.com/in/akhilprasenan" className="px-12 py-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all font-bold tracking-tight">
-              [ linkedin ]
+              [ LinkedIn ]
             </a>
             <a href="https://github.com/decodez" className="px-12 py-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all font-bold tracking-tight">
-              [ github ]
+              [ GitHub ]
             </a>
           </div>
 
           <div className="mt-16 flex items-center justify-center text-[var(--text-muted)] gap-2">
             <MapPin className="h-4 w-4" />
-            <span className="text-[10px] font-black uppercase tracking-widest">singapore / remote-available</span>
+            <span className="text-[10px] font-black uppercase tracking-widest">Singapore / Remote-Available</span>
           </div>
         </div>
       </section>

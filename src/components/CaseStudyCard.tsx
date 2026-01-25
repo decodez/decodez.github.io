@@ -15,7 +15,7 @@ export function CaseStudyCard({ study }: CaseStudyCardProps) {
       <div>
         <div className="flex items-center gap-2 mb-8 text-[var(--text-muted)] group-hover:text-[var(--bg-color)] transition-colors">
           <div className="h-[1px] w-6 bg-current" />
-          <span className="text-[10px] font-black uppercase tracking-widest">study / {study.company}</span>
+          <span className="text-[10px] font-black uppercase tracking-widest">Study / {study.company}</span>
         </div>
         
         <h3 className="text-3xl font-black tracking-tighter mb-4 leading-tight ">
@@ -36,7 +36,7 @@ export function CaseStudyCard({ study }: CaseStudyCardProps) {
       </div>
       
       <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest mt-auto">
-        <span>[ read technical record ]</span>
+        <span>[ Read Technical Record ]</span>
         <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
       </div>
     </Link>

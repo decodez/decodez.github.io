@@ -35,36 +35,36 @@ export function CommandPalette() {
           <div className="flex items-center border-b border-[var(--border-color)] px-4 bg-[var(--bg-color)]">
             <Search className="mr-3 h-4 w-4 shrink-0 text-[var(--text-muted)]" />
             <Command.Input 
-              placeholder="search sections..." 
+              placeholder="Search sections..." 
               className="flex h-14 w-full bg-transparent py-3 text-xs font-bold tracking-tight outline-none placeholder:text-[var(--text-muted)] selection:bg-[#ff4d00]/30 "
               autoFocus
             />
           </div>
           <Command.List className="max-h-[60vh] overflow-y-auto p-0 ">
             <Command.Empty className="py-12 text-center text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)]">
-              no results found.
+              No results found.
             </Command.Empty>
             
-            <Command.Group heading="navigation" className="px-4 py-3 text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)] border-b border-[var(--border-color)] last:border-0">
+            <Command.Group heading="Navigation" className="px-4 py-3 text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)] border-b border-[var(--border-color)] last:border-0">
               <Command.Item onSelect={() => runCommand("/")} className="relative flex cursor-pointer select-none items-center px-4 py-3 text-sm font-bold tracking-tight outline-none aria-selected:bg-[var(--text-primary)] aria-selected:text-[var(--bg-color)] transition-colors border-b border-[var(--border-color)] last:border-0">
                 <Home className="mr-3 h-4 w-4" />
-                <span>home / root</span>
+                <span>Home / Root</span>
               </Command.Item>
               <Command.Item onSelect={() => runCommand("/#toolbox")} className="relative flex cursor-pointer select-none items-center px-4 py-3 text-sm font-bold tracking-tight outline-none aria-selected:bg-[var(--text-primary)] aria-selected:text-[var(--bg-color)] transition-colors border-b border-[var(--border-color)] last:border-0">
                 <Code className="mr-3 h-4 w-4" />
-                <span>toolbox / tech-stack</span>
+                <span>Toolbox / Tech-Stack</span>
               </Command.Item>
               <Command.Item onSelect={() => runCommand("/#work")} className="relative flex cursor-pointer select-none items-center px-4 py-3 text-sm font-bold tracking-tight outline-none aria-selected:bg-[var(--text-primary)] aria-selected:text-[var(--bg-color)] transition-colors border-b border-[var(--border-color)] last:border-0">
                 <Briefcase className="mr-3 h-4 w-4" />
-                <span>work / experience-record</span>
+                <span>Work / Experience-Record</span>
               </Command.Item>
                <Command.Item onSelect={() => runCommand("/#contact")} className="relative flex cursor-pointer select-none items-center px-4 py-3 text-sm font-bold tracking-tight outline-none aria-selected:bg-[var(--text-primary)] aria-selected:text-[var(--bg-color)] transition-colors border-b border-[var(--border-color)] last:border-0">
                 <Mail className="mr-3 h-4 w-4" />
-                <span>contact / direct-outreach</span>
+                <span>Contact / Direct-Outreach</span>
               </Command.Item>
             </Command.Group>
 
-            <Command.Group heading="case studies" className="px-4 py-3 text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)] border-b border-[var(--border-color)]">
+            <Command.Group heading="Case Studies" className="px-4 py-3 text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)] border-b border-[var(--border-color)]">
               {caseStudies.map((study) => (
                 <Command.Item 
                   key={study.slug} 
@@ -72,13 +72,13 @@ export function CommandPalette() {
                   className="relative flex cursor-pointer select-none items-center px-4 py-3 text-sm font-bold tracking-tight outline-none aria-selected:bg-[var(--text-primary)] aria-selected:text-[var(--bg-color)] transition-colors border-b border-[var(--border-color)] last:border-0"
                 >
                   <PenTool className="mr-3 h-4 w-4" />
-                  <span>studies / {study.title}</span>
+                  <span>Studies / {study.title}</span>
                 </Command.Item>
               ))}
             </Command.Group>
 
             <div className="te-grid-item py-1 bg-[var(--text-primary)] flex items-center justify-center">
-               <span className="text-[8px] font-black uppercase tracking-[0.2em] text-[var(--bg-color)]">system / industrial-search</span>
+               <span className="text-[8px] font-black uppercase tracking-[0.2em] text-[var(--bg-color)]">System / Industrial-Search</span>
             </div>
           </Command.List>
         </Command>
