@@ -73,7 +73,7 @@ export default function Home() {
       <section className="te-grid-item col-span-full py-32 flex flex-col justify-center">
         <div className="max-w-4xl">
           <h1 className="text-6xl font-black tracking-tighter sm:text-8xl mb-8 leading-[0.85]">
-            akhil prasenan
+            Akhil Prasenan
           </h1>
           <div className="flex flex-col sm:flex-row sm:items-baseline gap-4 mb-12">
             <h2 className="text-xl font-bold tracking-tight text-[var(--text-secondary)] border-b-2 border-[var(--text-primary)] inline-block">
@@ -141,7 +141,7 @@ export default function Home() {
       <section id="toolbox" className="te-grid-item col-span-full scroll-mt-14 pt-24 pb-32">
         <div className="mb-16">
           <div className="inline-block border-2 border-[var(--border-color)] px-4 py-1 mb-6 text-[10px] font-black uppercase tracking-widest bg-[var(--text-primary)] text-[var(--bg-color)]">
-            toolbox
+            Toolbox
           </div>
           <h2 className="text-4xl font-black tracking-tighter mb-4">Technological Stack / Capabilities</h2>
           <p className="text-lg text-[var(--text-muted)] max-w-xl">
@@ -174,7 +174,7 @@ export default function Home() {
       <section id="studies" className="te-grid-item col-span-full scroll-mt-14 pt-24 pb-32">
         <div className="mb-16">
           <div className="inline-block border-2 border-[var(--border-color)] px-4 py-1 mb-6 text-[10px] font-black uppercase tracking-widest bg-[var(--text-primary)] text-[var(--bg-color)]">
-            selected case studies
+            Selected Case Studies
           </div>
           <h2 className="text-4xl font-black tracking-tighter mb-4">Technical Records / Deep-Dives</h2>
           <p className="text-lg text-[var(--text-muted)] max-w-xl">
@@ -204,9 +204,9 @@ export default function Home() {
       <section id="work" className="te-grid-item col-span-full scroll-mt-14 pt-24 pb-32">
         <div className="mb-16">
           <div className="inline-block border-2 border-[var(--border-color)] px-4 py-1 mb-6 text-[10px] font-black uppercase tracking-widest bg-[var(--text-primary)] text-[var(--bg-color)]">
-            work history
+            Work History
           </div>
-          <h2 className="text-4xl font-black tracking-tighter mb-4">professional record / timeline</h2>
+          <h2 className="text-4xl font-black tracking-tighter mb-4">Professional Record / Timeline</h2>
         </div>
 
         <div className="space-y-0 border-t border-[var(--border-color)]">
@@ -239,10 +239,10 @@ export default function Home() {
       <section id="contact" className="te-grid-item col-span-full scroll-mt-14 pt-32 pb-48 border-b border-[var(--border-color)]">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-block border-2 border-[var(--border-color)] px-4 py-1 mb-12 text-[10px] font-black uppercase tracking-widest">
-            get in touch
+            Get In Touch
           </div>
           <h2 className="text-6xl sm:text-8xl font-black tracking-tighter mb-12 leading-[0.85]">
-            open for collaboration.
+            Open for Collaboration.
           </h2>
           
           <div className="flex flex-wrap justify-center gap-0 border-t border-l border-[var(--border-color)] max-w-fit mx-auto">
