@@ -18,11 +18,11 @@ export function CaseStudyCard({ study }: CaseStudyCardProps) {
           <span className="text-[10px] font-black uppercase tracking-widest">study / {study.company}</span>
         </div>
         
-        <h3 className="text-3xl font-black tracking-tighter mb-4 leading-tight lowercase">
+        <h3 className="text-3xl font-black tracking-tighter mb-4 leading-tight ">
           {study.title}
         </h3>
         
-        <p className="text-md font-medium tracking-tight opacity-70 mb-8 line-clamp-3 lowercase">
+        <p className="text-md font-medium tracking-tight opacity-70 mb-8 line-clamp-3 ">
           {study.impactLine}
         </p>
       </div>

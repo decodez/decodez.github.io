@@ -7,7 +7,7 @@ const WORK_HISTORY = [
     company: "JLL (Client: Google)",
     role: "Lead Software Engineer (Platform-Focused)",
     dates: "2020 – Present",
-    description: "Technical owner for frontend and system architecture of a complex enterprise web application supporting Google projects.",
+    description: "Technical owner for Front-End and system architecture of a complex enterprise web application supporting Google projects.",
     achievements: [
       "Drive architectural decisions balancing performance, complexity, and evolving business requirements.",
       "Own CI/CD pipelines and DevOps workflows, improving deployment reliability and developer efficiency.",
@@ -21,9 +21,9 @@ const WORK_HISTORY = [
     dates: "2018 – 2020",
     description: "Delivered large-scale enterprise and government web platforms with complex regulatory requirements.",
     achievements: [
-      "Designed scalable frontend architectures and reusable component systems.",
+      "Designed scalable Front-End architectures and reusable component systems.",
       "Collaborated with backend and product teams to ensure maintainability and performance.",
-      "Contributed to shared frontend standards and documentation across projects."
+      "Contributed to shared Front-End standards and documentation across projects."
     ]
   },
   {
@@ -43,7 +43,7 @@ const WORK_HISTORY = [
     description: "Delivering end-to-end software solutions, owning system design and deployment.",
     achievements: [
       "Built full-stack systems using MERN stack, Electron desktop applications, and custom dashboards.",
-      "Designed backend APIs, authentication flows, data models, and frontend systems."
+      "Designed backend APIs, authentication flows, data models, and Front-End systems."
     ]
   }
 ]
@@ -62,7 +62,7 @@ const SKILLS = [
   {
     category: "Systems & Architecture",
     icon: Layers,
-    items: ["Frontend Systems", "API Integrations", "Data Visualisation", "Enterprise CMS"]
+    items: ["Front-End Systems", "API Integrations", "Data Visualisation", "Enterprise CMS"]
   }
 ]
 
@@ -77,12 +77,11 @@ export default function Home() {
           </h1>
           <div className="flex flex-col sm:flex-row sm:items-baseline gap-4 mb-12">
             <h2 className="text-xl font-bold tracking-tight text-[var(--text-secondary)] border-b-2 border-[var(--text-primary)] inline-block">
-              lead / principal-track full stack engineer
+              Lead / Principal-Level Full-Stack Engineer
             </h2>
           </div>
           <p className="max-w-xl text-lg font-medium tracking-tight text-[var(--text-muted)] mb-12">
-            specializing in scalable architecture, developer experience, and product-led engineering. 
-            i build systems that grow with the business.
+            Specializing in scalable architecture, developer experience, and product-led engineering. I build systems that grow with the business.
           </p>
           
           <div className="flex flex-wrap gap-0 border-t border-l border-[var(--border-color)] max-w-fit">
@@ -133,7 +132,7 @@ export default function Home() {
             <div className="h-0.5 w-6 bg-[var(--border-color)]" />
             <span className="text-[10px] font-bold tracking-widest uppercase">03 / data engineering</span>
           </div>
-          <h3 className="text-2xl font-bold mb-4 tracking-tight">handling high throughput and visualizing complex datasets seamlessly.</h3>
+          <h3 className="text-2xl font-bold mb-4 tracking-tight">Handling high-throughput pipelines and visualizing complex datasets seamlessly.</h3>
           <LineChart className="h-8 w-8 text-[var(--border-color)] opacity-20 group-hover:opacity-100 transition-opacity" />
         </section>
       </div>
@@ -243,7 +242,7 @@ export default function Home() {
             get in touch
           </div>
           <h2 className="text-6xl sm:text-8xl font-black tracking-tighter mb-12 leading-[0.85]">
-            open for / collaboration.
+            open for collaboration.
           </h2>
           
           <div className="flex flex-wrap justify-center gap-0 border-t border-l border-[var(--border-color)] max-w-fit mx-auto">

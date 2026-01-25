@@ -38,7 +38,7 @@ export default function CaseStudyDetail() {
   if (!study) return (
     <div className="te-grid-container min-h-screen">
       <div className="te-grid-item col-span-full flex flex-col items-center justify-center py-64">
-        <h1 className="text-4xl font-black lowercase mb-8 tracking-tighter">record / not-found</h1>
+        <h1 className="text-4xl font-black  mb-8 tracking-tighter">record / not-found</h1>
         <Link to="/case-studies" className="px-8 py-4 text-xs font-bold border border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all">
           [ return to archive ]
         </Link>
@@ -49,7 +49,7 @@ export default function CaseStudyDetail() {
   return (
     <div className="te-grid-container transition-colors duration-500 min-h-screen">
       {/* Detail Header */}
-      <section className="te-grid-item col-span-full pt-16 pb-32 lowercase">
+      <section className="te-grid-item col-span-full pt-16 pb-32 ">
         <Link to="/case-studies" className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors mb-16 group">
           <ArrowLeft className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-1" /> [ back to index ]
         </Link>
@@ -93,7 +93,7 @@ export default function CaseStudyDetail() {
       <div className="grid grid-cols-1 lg:grid-cols-12 col-span-full te-grid-container border-t-0 font-sans">
         {/* Technical Navigation / Sidebar */}
         <aside className="lg:col-span-3 border-r border-[var(--border-color)] relative">
-          <div className="sticky top-24 p-8 flex flex-col gap-2 lowercase">
+          <div className="sticky top-24 p-8 flex flex-col gap-2 ">
             <div className="text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)] mb-4 border-b border-[var(--border-color)] pb-4">
               report / sections
             </div>
@@ -120,7 +120,7 @@ export default function CaseStudyDetail() {
         </aside>
 
         {/* Technical Data / Content */}
-        <div className="lg:col-span-9 p-8 sm:p-16 space-y-32 lowercase">
+        <div className="lg:col-span-9 p-8 sm:p-16 space-y-32 ">
           <section id="problem" className="scroll-mt-32">
             <div className="flex items-center gap-4 mb-8">
               <div className="h-0.5 w-12 bg-[#ff4d00]" />

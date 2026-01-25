@@ -36,11 +36,11 @@ export function CommandPalette() {
             <Search className="mr-3 h-4 w-4 shrink-0 text-[var(--text-muted)]" />
             <Command.Input 
               placeholder="search sections..." 
-              className="flex h-14 w-full bg-transparent py-3 text-xs font-bold tracking-tight outline-none placeholder:text-[var(--text-muted)] selection:bg-[#ff4d00]/30 lowercase"
+              className="flex h-14 w-full bg-transparent py-3 text-xs font-bold tracking-tight outline-none placeholder:text-[var(--text-muted)] selection:bg-[#ff4d00]/30 "
               autoFocus
             />
           </div>
-          <Command.List className="max-h-[60vh] overflow-y-auto p-0 lowercase">
+          <Command.List className="max-h-[60vh] overflow-y-auto p-0 ">
             <Command.Empty className="py-12 text-center text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)]">
               no results found.
             </Command.Empty>

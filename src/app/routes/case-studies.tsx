@@ -34,7 +34,7 @@ export default function CaseStudies() {
     <div className="te-grid-container transition-colors duration-500 min-h-screen">
       {/* Header Section */}
       <section className="te-grid-item col-span-full py-24 flex flex-col justify-center">
-        <div className="max-w-4xl lowercase">
+        <div className="max-w-4xl ">
           <div className="inline-block border-2 border-[var(--border-color)] px-4 py-1 mb-8 text-[10px] font-black uppercase tracking-widest bg-[var(--text-primary)] text-[var(--bg-color)]">
             technical archive
           </div>
@@ -54,7 +54,7 @@ export default function CaseStudies() {
           <input 
             type="text"
             placeholder="search catalog..."
-            className="w-full bg-transparent text-xs font-bold tracking-tight outline-none placeholder:text-[var(--text-muted)] lowercase"
+            className="w-full bg-transparent text-xs font-bold tracking-tight outline-none placeholder:text-[var(--text-muted)] "
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -101,7 +101,7 @@ export default function CaseStudies() {
             </div>
           ))
         ) : (
-          <section className="te-grid-item col-span-full py-32 text-center lowercase">
+          <section className="te-grid-item col-span-full py-32 text-center ">
             <div className="text-[10px] font-black uppercase tracking-widest text-[var(--text-muted)] mb-4">result / zero</div>
             <p className="text-xl font-bold tracking-tight mb-8">no technical records match the current parameters.</p>
             <button 
