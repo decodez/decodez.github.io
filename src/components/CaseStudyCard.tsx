@@ -10,7 +10,7 @@ export function CaseStudyCard({ study }: CaseStudyCardProps) {
   return (
     <Link 
       to={`/case-studies/${study.slug}`}
-      className="group block bg-[var(--bg-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all p-10 flex flex-col justify-between h-full"
+      className="group block te-border bg-[var(--bg-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all p-10 flex flex-col justify-between h-full"
     >
       <div>
         <div className="flex items-center gap-2 mb-8 text-[var(--text-muted)] group-hover:text-[var(--bg-color)] transition-colors">
