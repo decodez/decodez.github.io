@@ -1,0 +1,67 @@
+{
+    "slug": "smart-room-comfort-iot",
+    "title": "Smart Room Comfort and Air Quality Advisor (IoT)",
+    "date": "2024-06-01",
+    "role": "IoT Developer",
+    "company": "Academic Project (IoT Systems)",
+    "tags": [
+        "Internet of Things",
+        "Embedded Systems",
+        "Sensor Fusion",
+        "Cloud Monitoring"
+    ],
+    "impactLine": "Delivered a low-cost IoT system that transforms raw environmental sensor data into an intuitive real-time comfort assessment.",
+    "problem": "Traditional indoor monitoring systems expose raw sensor readings that require manual interpretation, making it difficult for users to understand overall comfort and air quality conditions.",
+    "constraints": [
+        "Limited processing power and memory on microcontroller",
+        "Need for non-blocking, reliable real-time operation",
+        "Low-cost hardware requirement",
+        "Continuous cloud connectivity without data loss"
+    ],
+    "decisions": [
+        {
+            "title": "Composite Comfort Scoring Algorithm",
+            "why": "Combining temperature, humidity, air quality, lighting, and occupancy into a single score provided actionable insight instead of raw values."
+        },
+        {
+            "title": "Non-Blocking Firmware Architecture",
+            "why": "Timer-driven execution using millis() ensured stable sensor polling, display updates, and cloud communication without watchdog resets."
+        }
+    ],
+    "architecture": {
+        "overview": "A layered IoT architecture combining multi-sensor acquisition, embedded processing, local feedback, and cloud-based dashboards.",
+        "bullets": [
+            "ESP8266 NodeMCU microcontroller with integrated Wi-Fi",
+            "BME280, BH1750, MQ135, and PIR sensors for environmental sensing",
+            "Local OLED display and LED indicators for instant feedback",
+            "Blynk IoT cloud platform for remote monitoring and data visualization"
+        ]
+    },
+    "implementationNotes": [
+        "Integrated multiple digital and analog sensors using I2C and GPIO interfaces.",
+        "Computed comfort levels using threshold-based scoring inspired by indoor comfort guidelines.",
+        "Implemented SSL-secured cloud communication with virtual pin mapping.",
+        "Displayed real-time data locally on OLED and remotely on mobile and web dashboards."
+    ],
+    "results": [
+        "Reliable real-time monitoring with 1-second sensor updates",
+        "Clear GOOD / OK / BAD comfort classification for users",
+        "Stable cloud synchronization without communication loss",
+        "Delivered complete system at a hardware cost of approximately SGD 40"
+    ],
+    "tradeoffs": [
+        "Air quality sensing is qualitative rather than ppm-accurate",
+        "Comfort scoring thresholds require calibration for different environments"
+    ],
+    "nextImprovements": [
+        "Machine-learning-based comfort prediction",
+        "Mobile notifications for prolonged poor air quality",
+        "Support for additional environmental sensors"
+    ],
+    "links": [
+        {
+            "label": "Project Report",
+            "url": "IoT Project Documentation"
+        }
+    ]
+}

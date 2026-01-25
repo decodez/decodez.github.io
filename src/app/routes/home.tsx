@@ -1,4 +1,6 @@
 import { Briefcase, Layers, LineChart, Code2, Cloud, Mail, MapPin, FileText } from "lucide-react"
+import { CaseStudyCard } from "@/components/CaseStudyCard"
+import { getAllCaseStudies } from "@/lib/content"
 
 const WORK_HISTORY = [
   {
@@ -166,6 +168,36 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Featured Case Studies Section */}
+      <section id="studies" className="te-grid-item col-span-full scroll-mt-14 pt-24 pb-32">
+        <div className="mb-16">
+          <div className="inline-block border-2 border-[var(--border-color)] px-4 py-1 mb-6 text-[10px] font-black uppercase tracking-widest bg-[var(--text-primary)] text-[var(--bg-color)]">
+            selected case studies
+          </div>
+          <h2 className="text-4xl font-black tracking-tighter mb-4">technical records / deep-dives</h2>
+          <p className="text-lg text-[var(--text-muted)] max-w-xl">
+            a curated selection of projects focusing on architectural trade-offs and engineering impact.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-[var(--border-color)] max-w-6xl">
+          {getAllCaseStudies().slice(0, 2).map((study) => (
+            <div key={study.slug} className="te-grid-item p-0 border-r border-b border-[var(--border-color)]">
+              <CaseStudyCard study={study} />
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12">
+          <a
+            href="/case-studies"
+            className="px-8 py-4 text-xs font-bold border border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all inline-flex items-center gap-2"
+          >
+            [ view all technical records ] <FileText className="h-3 w-3" />
+          </a>
         </div>
       </section>
 
