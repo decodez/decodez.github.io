@@ -1,0 +1,68 @@
+{
+    "slug": "smart-client-portal-ai-proposals",
+    "title": "Smart Client Portal with AI-Powered Proposal Generation",
+    "date": "2025-12-01",
+    "role": "Full-Stack Developer",
+    "company": "Academic Project (BSc Computer Science)",
+    "tags": [
+        "Full Stack",
+        "AI Integration",
+        "Web Security",
+        "Workflow Automation"
+    ],
+    "impactLine": "Automated proposal creation and client communication, significantly reducing manual effort while improving proposal consistency and turnaround time.",
+    "problem": "Freelancers rely on fragmented tools like emails and documents to collect requirements, write proposals, and manage revisions, leading to inefficiencies, miscommunication, and inconsistent proposal quality.",
+    "constraints": [
+        "Secure handling of client data and credentials",
+        "Low-friction client access without account creation",
+        "Human-in-the-loop control over AI-generated content",
+        "Lightweight and maintainable architecture"
+    ],
+    "decisions": [
+        {
+            "title": "Adopted AI-Assisted Proposal Drafting",
+            "why": "Using the Hugging Face Inference API with a large language model reduced repetitive writing while keeping freelancers in full editorial control."
+        },
+        {
+            "title": "Tokenised Email-Based Client Interaction",
+            "why": "Secure response tokens enabled clients to accept or request revisions without creating accounts, reducing friction while maintaining security."
+        }
+    ],
+    "architecture": {
+        "overview": "A full-stack framework-based web application with server-side routing, AI integration, and secure email-driven workflows.",
+        "bullets": [
+            "React Router v7 framework mode for integrated frontend and server logic",
+            "Node.js and TypeScript backend with server loaders and actions",
+            "Prisma ORM with SQLite for relational data persistence",
+            "Hugging Face Inference API for AI proposal generation",
+            "Resend API for automated email workflows"
+        ]
+    },
+    "implementationNotes": [
+        "Implemented secure session-based authentication using HttpOnly cookies and bcrypt password hashing.",
+        "Designed a proposal lifecycle with draft, sent, accepted, and revision states.",
+        "Integrated a rich-text editor for editing AI-generated proposals before sending.",
+        "Built validation and fallback logic to handle AI or email service failures."
+    ],
+    "results": [
+        "Automated end-to-end proposal workflow from client intake to acceptance",
+        "Reduced manual proposal drafting effort while improving consistency",
+        "Secure, low-friction client participation via tokenised links",
+        "System validated through functional, security, and end-to-end testing"
+    ],
+    "tradeoffs": [
+        "Increased initial development complexity due to full-stack framework learning curve",
+        "AI-generated content still requires human review for accuracy and tone"
+    ],
+    "nextImprovements": [
+        "PDF proposal export and download support",
+        "Payment and invoicing integration",
+        "Team-based roles for collaborative proposal management"
+    ],
+    "links": [
+        {
+            "label": "Project Report",
+            "url": "Academic Project Documentation"
+        }
+    ]
+}
