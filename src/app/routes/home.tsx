@@ -183,9 +183,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-t border-l border-[var(--border-color)] max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl">
           {getAllCaseStudies().slice(0, 2).map((study) => (
-            <div key={study.slug} className="te-grid-item p-0 border-r border-b border-[var(--border-color)]">
+            <div key={study.slug} className="">
               <CaseStudyCard study={study} />
             </div>
           ))}

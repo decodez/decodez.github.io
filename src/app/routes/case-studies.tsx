@@ -93,10 +93,10 @@ export default function CaseStudies() {
       </section>
 
       {/* Grid List */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-span-full te-grid-container overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-span-full gap-8 overflow-hidden">
         {filteredStudies.length > 0 ? (
           filteredStudies.map(s => (
-            <div key={s.slug} className="te-grid-item p-0 border-r border-b border-[var(--border-color)]">
+            <div key={s.slug} className="">
               <CaseStudyCard study={s} />
             </div>
           ))
