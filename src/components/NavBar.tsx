@@ -16,7 +16,7 @@ export function NavBar() {
 
   return (
     <nav className="sticky top-0 z-40 w-full border-b border-[var(--border-color)] bg-[var(--panel-bg)] transition-colors duration-500 left-0 right-0">
-      <div className="flex h-14 items-center justify-between pl-4 md:pl-8 pr-0">
+      <div className="flex h-14 items-center justify-between px-4 md:px-8">
         <Link to="/" className="text-xl font-bold tracking-tighter text-[var(--text-primary)] shrink-0">
           Akhil.
         </Link>

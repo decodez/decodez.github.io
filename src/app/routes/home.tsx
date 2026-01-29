@@ -211,7 +211,7 @@ export default function Home() {
 
         <div className="space-y-0 border-t border-[var(--border-color)]">
           {WORK_HISTORY.map((job, index) => (
-            <div key={index} className="border-b border-[var(--border-color)] last:border-b-0 py-16 group hover:bg-[var(--text-primary)]/5 transition-colors px-4 sm:px-0">
+            <div key={index} className="border-b border-[var(--border-color)] last:border-b-0 py-16 group hover:bg-[var(--text-primary)]/5 transition-colors sm:px-0">
               <div className="grid md:grid-cols-12 gap-8 max-w-6xl mx-auto">
                 <div className="md:col-span-3">
                   <div className="text-[10px] font-black uppercase tracking-widest text-[#ff4d00] mb-2">{job.dates}</div>
