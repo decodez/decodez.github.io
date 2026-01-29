@@ -2,9 +2,12 @@ import { useEffect, useState } from "react"
 import { Command } from "cmdk"
 import { Briefcase, Code, Home, Mail, Search, PenTool } from "lucide-react"
 import { getAllCaseStudies } from "@/lib/content"
+import { useNavigate, useLocation } from "react-router-dom"
 
 export function CommandPalette() {
   const [open, setOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
   const caseStudies = getAllCaseStudies()
 
   useEffect(() => {
@@ -20,7 +23,21 @@ export function CommandPalette() {
 
   const runCommand = (href: string) => {
     setOpen(false)
-    window.location.href = href
+    
+    if (href.startsWith("/#")) {
+      const targetId = href.replace("/#", "")
+      if (location.pathname === "/") {
+        const element = document.getElementById(targetId)
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" })
+          window.history.pushState(null, "", `#/${targetId}`)
+        }
+      } else {
+        navigate(`/${targetId}`)
+      }
+    } else {
+      navigate(href)
+    }
   }
 
   if (!open) return null;
