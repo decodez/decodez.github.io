@@ -245,7 +245,7 @@ export default function Home() {
             Open for Collaboration.
           </h2>
           
-          <div className="flex flex-wrap justify-center gap-0 border-t border-l border-[var(--border-color)] max-w-fit mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-l border-[var(--border-color)] max-w-fit mx-auto">
             <a href="mailto:akhil_prasenan@outlook.com" className="px-12 py-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all font-bold tracking-tight">
               [ Email ]
             </a>
