@@ -84,22 +84,22 @@ export default function Home() {
             Specializing in scalable architecture, developer experience, and product-led engineering. I build systems that grow with the business.
           </p>
           
-          <div className="flex flex-wrap gap-0 border-t border-l border-[var(--border-color)] max-w-fit">
+          <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-l border-[var(--border-color)] max-w-fit">
             <a
               href="#work" 
-              className="px-8 py-4 text-xs font-bold border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all flex items-center gap-2"
+              className="px-8 py-4 text-xs font-bold border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all flex items-center justify-center sm:justify-start gap-2"
             >
               [ Experience ] <Briefcase className="h-3 w-3" />
             </a>
             <a 
               href="/resume.pdf" 
-              className="px-8 py-4 text-xs font-bold border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all flex items-center gap-2"
+              className="px-8 py-4 text-xs font-bold border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all flex items-center justify-center sm:justify-start gap-2"
             >
               [ Resume ] <FileText className="h-3 w-3" />
             </a>
             <a
               href="#contact" 
-              className="px-8 py-4 text-xs font-bold border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all flex items-center gap-2"
+              className="px-8 py-4 text-xs font-bold border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all flex items-center justify-center sm:justify-start gap-2"
             >
               [ Contact ] <Mail className="h-3 w-3" />
             </a>
