@@ -22,10 +22,23 @@
     border-left: 1px solid var(--border-color);
   }
 
+  /* Responsive adjustment for mobile to look centered */
+  @media (max-width: 640px) {
+    .te-grid-container {
+      border-left: 0;
+    }
+  }
+
   .te-grid-item {
     border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-    padding: 2rem;
+    padding: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .te-grid-item {
+      padding: 2rem;
+    }
   }
 }
 
