@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/lib/theme"
 export function RootLayout() {
   return (
     <ThemeProvider>
-      <div className="flex min-h-screen flex-col bg-[var(--bg-color)] text-[var(--text-primary)] font-sans antialiased selection:bg-[#ff4d00]/30 relative transition-colors duration-500">
+      <div className="flex min-h-screen w-full flex-col bg-[var(--bg-color)] text-[var(--text-primary)] font-sans antialiased selection:bg-[#ff4d00]/30 relative transition-colors duration-500 overflow-x-hidden">
         <NavBar />
         <main className="flex-1">
           <Outlet />
