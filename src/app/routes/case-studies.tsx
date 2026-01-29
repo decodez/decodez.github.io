@@ -93,7 +93,7 @@ export default function CaseStudies() {
       </section>
 
       {/* Grid List */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-span-full gap-8 overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-span-full gap-8 px-4 md:px-8 py-12 md:py-16 overflow-hidden">
         {filteredStudies.length > 0 ? (
           filteredStudies.map(s => (
             <div key={s.slug} className="">
