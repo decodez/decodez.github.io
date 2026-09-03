@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Briefcase, Layers, Sparkles, Code2, Cloud, Mail, MapPin, FileText } from "lucide-react"
 import { CaseStudyCard } from "@/components/CaseStudyCard"
 import { getAllCaseStudies } from "@/lib/content"
@@ -61,6 +62,15 @@ const WORK_HISTORY = [
   }
 ]
 
+function handleAnchorClick(e: React.MouseEvent<HTMLAnchorElement>, targetId: string) {
+  e.preventDefault()
+  const element = document.getElementById(targetId)
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" })
+    window.history.pushState(null, "", `#/${targetId}`)
+  }
+}
+
 const SKILLS = [
   {
     category: "Languages & Frameworks",
@@ -104,7 +114,8 @@ export default function Home() {
           
           <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-l border-[var(--border-color)] max-w-fit">
             <a
-              href="#work" 
+              href="#work"
+              onClick={(e) => handleAnchorClick(e, "work")}
               className="px-8 py-4 text-xs font-bold border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all flex items-center justify-center sm:justify-start gap-2"
             >
               [ Experience ] <Briefcase className="h-3 w-3" />
@@ -116,7 +127,8 @@ export default function Home() {
               [ Resume ] <FileText className="h-3 w-3" />
             </a>
             <a
-              href="#contact" 
+              href="#contact"
+              onClick={(e) => handleAnchorClick(e, "contact")}
               className="px-8 py-4 text-xs font-bold border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all flex items-center justify-center sm:justify-start gap-2"
             >
               [ Contact ] <Mail className="h-3 w-3" />
@@ -209,12 +221,12 @@ export default function Home() {
         </div>
 
         <div className="mt-12">
-          <a
-            href="/case-studies"
+          <Link
+            to="/case-studies"
             className="px-8 py-4 text-xs font-bold border border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all inline-flex items-center gap-2"
           >
             [ View All Technical Records ] <FileText className="h-3 w-3" />
-          </a>
+          </Link>
         </div>
       </section>
 
