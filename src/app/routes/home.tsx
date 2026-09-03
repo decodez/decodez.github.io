@@ -1,49 +1,62 @@
-import { Briefcase, Layers, LineChart, Code2, Cloud, Mail, MapPin, FileText } from "lucide-react"
+import { Briefcase, Layers, Sparkles, Code2, Cloud, Mail, MapPin, FileText } from "lucide-react"
 import { CaseStudyCard } from "@/components/CaseStudyCard"
 import { getAllCaseStudies } from "@/lib/content"
 
 const WORK_HISTORY = [
   {
     company: "JLL (Client: Google)",
-    role: "Lead Software Engineer (Platform-Focused)",
-    dates: "2020 – Present",
-    description: "Technical owner for Front-End and system architecture of a complex enterprise web application supporting Google projects.",
+    role: "Lead Software Engineer (P4)",
+    dates: "Mar 2025 – Present",
+    description: "Own the architecture, CI/CD pipelines, and deployment infrastructure for an enterprise platform used by Google project teams across the US, Europe, and APAC, while leading a distributed team of four engineers.",
     achievements: [
-      "Drive architectural decisions balancing performance, complexity, and evolving business requirements.",
-      "Own CI/CD pipelines and DevOps workflows, improving deployment reliability and developer efficiency.",
-      "Lead continuous system improvement through refactoring and optimization rather than just feature delivery.",
-      "Mentor engineers providing architectural guidance and design reviews."
+      "Designed the RAG ingestion pipeline that keeps the knowledge base current with zero manual steps: documents dropped into Cloud Storage are automatically embedded and indexed into a Vertex AI vector database via Cloud Functions.",
+      "Built the Python backend that grounds Vertex AI on this corpus to answer user questions and draft executive summaries comparing data versions.",
+      "Own CI/CD pipelines shipping Docker images to Cloud Run and Cloud Functions, improving release reliability and developer efficiency.",
+      "Building an AI-powered comparison tool that explains data changes, projects impact, and flags likely data-entry mistakes before decisions are made on them.",
+      "Lead a team of four engineers across Singapore and Poland, owning hiring, onboarding, and mentoring.",
+      "Act as primary technical contact and project manager for the account, from planning through delivery."
     ]
   },
   {
-    company: "EY Digital",
-    role: "Senior UI / UX Developer",
-    dates: "2018 – 2020",
-    description: "Delivered large-scale enterprise and government web platforms with complex regulatory requirements.",
+    company: "JLL (Client: Google)",
+    role: "Lead Software Engineer (P3)",
+    dates: "Mar 2022 – Mar 2025",
+    description: "Ran day-to-day development and Agile delivery for the platform team, setting the application architecture and DevOps processes still in use today.",
     achievements: [
-      "Designed scalable Front-End architectures and reusable component systems.",
-      "Collaborated with backend and product teams to ensure maintainability and performance.",
-      "Contributed to shared Front-End standards and documentation across projects."
+      "Planned the application architecture and set up the DevOps processes the team still runs on.",
+      "Reviewed code across the team and mentored junior engineers, raising the baseline of what shipped.",
+      "Managed client communication and stakeholder expectations through several major deliveries."
+    ]
+  },
+  {
+    company: "JLL (Client: Google)",
+    role: "Senior Frontend Engineer",
+    dates: "May 2020 – Mar 2022",
+    description: "Built and optimized the frontend for a data-heavy enterprise platform used across large operational datasets.",
+    achievements: [
+      "Built data visualization dashboards that turned large operational datasets into views stakeholders actually used for decisions.",
+      "Optimized frontend performance to handle large datasets without degrading the user experience.",
+      "Redesigned user interaction flows, improving usability and product adoption."
+    ]
+  },
+  {
+    company: "Ernst & Young",
+    role: "Senior UI/UX Developer",
+    dates: "May 2018 – Jul 2020",
+    description: "Delivered large enterprise and government web platforms with heavy regulatory requirements.",
+    achievements: [
+      "Wrote automated end-to-end browser tests with Selenium for these platforms.",
+      "Designed the frontend architecture and reusable component systems used across projects.",
+      "Wrote the shared frontend standards other teams built on."
     ]
   },
   {
     company: "Adelphi Digital",
-    role: "UI / UX Developer",
-    dates: "2017 – 2018",
-    description: "Built responsive, production-grade web applications for enterprise clients.",
+    role: "UI/UX Developer",
+    dates: "May 2017 – May 2018",
+    description: "Built responsive production web applications with a focus on performance, accessibility, and cross-browser support.",
     achievements: [
-      "Ensured performance optimisation, accessibility, and cross-browser compatibility.",
-      "Delivered enterprise digital solutions within cross-functional teams."
-    ]
-  },
-  {
-    company: "Freelance",
-    role: "Software Engineer (Full Stack / Systems)",
-    dates: "2014 – Present",
-    description: "Delivering end-to-end software solutions, owning system design and deployment.",
-    achievements: [
-      "Built full-stack systems using MERN stack, Electron desktop applications, and custom dashboards.",
-      "Designed backend APIs, authentication flows, data models, and Front-End systems."
+      "Delivered responsive, production-grade web applications across cross-functional client teams."
     ]
   }
 ]
@@ -52,17 +65,22 @@ const SKILLS = [
   {
     category: "Languages & Frameworks",
     icon: Code2,
-    items: ["JavaScript", "TypeScript", "Python", "Angular", "React", "HTML", "CSS", "SASS"]
+    items: ["Python", "Go", "TypeScript", "JavaScript", "Node.js", "Angular", "React", "HTML", "CSS/SASS"]
   },
   {
-    category: "Platform & Tooling",
+    category: "Platform & Infrastructure",
     icon: Cloud,
-    items: ["CI/CD pipelines", "DevOps workflows", "Monitoring", "Production Support"]
+    items: ["Google Cloud Platform", "Cloud Run", "Cloud Functions", "Cloud Storage", "Cloud Logging", "Docker", "CI/CD Pipeline Design", "Terraform"]
   },
   {
-    category: "Systems & Architecture",
+    category: "AI Platform & Data",
+    icon: Sparkles,
+    items: ["RAG Pipeline Design", "Vertex AI", "Vector Databases", "Embeddings & Retrieval", "LLM Grounding"]
+  },
+  {
+    category: "Architecture & Leadership",
     icon: Layers,
-    items: ["Front-End Systems", "API Integrations", "Data Visualisation", "Enterprise CMS"]
+    items: ["System & Platform Architecture", "Distributed Team Leadership", "Agile Delivery", "Stakeholder Management"]
   }
 ]
 
@@ -77,11 +95,11 @@ export default function Home() {
           </h1>
           <div className="flex flex-col sm:flex-row sm:items-baseline gap-4 mb-12">
             <h2 className="text-xl font-bold tracking-tight text-[var(--text-secondary)] border-b-2 border-[var(--text-primary)] inline-block">
-              Lead / Principal-Level Full-Stack Engineer
+              Lead Software Engineer · Platform & AI Infrastructure
             </h2>
           </div>
           <p className="max-w-xl text-lg font-medium tracking-tight text-[var(--text-muted)] mb-12">
-            Specializing in scalable architecture, developer experience, and product-led engineering. I build systems that grow with the business.
+            9+ years building and running enterprise platforms on Google Cloud, the last six embedded with Google through JLL. Now focused on RAG pipelines and AI platform infrastructure that ground LLM output for production use.
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-l border-[var(--border-color)] max-w-fit">
@@ -130,10 +148,10 @@ export default function Home() {
         <section className="te-grid-item group hover:bg-[#ff4d00]/5 transition-colors border-l-0 md:border-l">
           <div className="flex items-center gap-2 mb-6 text-[var(--text-muted)]">
             <div className="h-0.5 w-6 bg-[var(--border-color)]" />
-            <span className="text-[10px] font-bold tracking-widest uppercase">03 / Data Engineering</span>
+            <span className="text-[10px] font-bold tracking-widest uppercase">03 / AI Infrastructure</span>
           </div>
-          <h3 className="text-2xl font-bold mb-4 tracking-tight">Handling high-throughput pipelines and visualizing complex datasets seamlessly.</h3>
-          <LineChart className="h-8 w-8 text-[var(--border-color)] opacity-20 group-hover:opacity-100 transition-opacity" />
+          <h3 className="text-2xl font-bold mb-4 tracking-tight">Designing RAG pipelines and grounding LLM output for production AI features.</h3>
+          <Sparkles className="h-8 w-8 text-[var(--border-color)] opacity-20 group-hover:opacity-100 transition-opacity" />
         </section>
       </div>
 
@@ -246,7 +264,7 @@ export default function Home() {
           </h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-l border-[var(--border-color)] max-w-fit mx-auto">
-            <a href="mailto:akhil_prasenan@outlook.com" className="px-12 py-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all font-bold tracking-tight">
+            <a href="mailto:prasenanakhil@gmail.com" className="px-12 py-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all font-bold tracking-tight">
               [ Email ]
             </a>
             <a href="https://linkedin.com/in/akhilprasenan" className="px-12 py-8 border-r border-b border-[var(--border-color)] hover:bg-[var(--text-primary)] hover:text-[var(--bg-color)] transition-all font-bold tracking-tight">
