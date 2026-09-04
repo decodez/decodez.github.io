@@ -1,73 +1,43 @@
-# React + TypeScript + Vite
+# decodez.github.io
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio and case-study site for Akhil Prasenan, live at [decodez.github.io](https://decodez.github.io).
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** + **React Router 7** (file-based routes under `src/app/routes`)
+- **Vite 7** + **TypeScript**
+- **Tailwind CSS v4**
+- **Framer Motion** for page/element transitions
+- **cmdk** for the command-palette navigation
+- `lucide-react` for icons, `clsx` / `tailwind-merge` for class composition
 
-## React Compiler
+## Structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── app/
+│   ├── layout/         # shared shell (nav, command palette, etc.)
+│   └── routes/         # home.tsx, case-studies.tsx, case-study.$slug.tsx
+├── components/         # shared UI components
+├── content/
+│   └── case-studies/   # one JSON file per case study, rendered by case-study.$slug.tsx
+├── lib/                # utilities
+├── router.tsx           # route table
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Case studies are data-driven — add a new one by dropping a JSON file into `src/content/case-studies/` following the shape of the existing entries; no route code changes needed.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Local development
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev       # start the Vite dev server
+npm run build      # type-check (tsc -b) + production build
+npm run preview    # preview the production build locally
+npm run lint        # eslint
 ```
+
+## Deployment
+
+Deployed to GitHub Pages from this repo (`decodez.github.io` — the special repo name GitHub uses to serve a user site directly at `https://decodez.github.io`).
